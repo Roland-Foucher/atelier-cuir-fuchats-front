@@ -1,7 +1,7 @@
 import Banner from './Banner'
 import Nav from './Nav'
 import Footer from './Footer'
-import '../styles' 
+import '../styles/App.css' 
 
 function App() {
   return (
