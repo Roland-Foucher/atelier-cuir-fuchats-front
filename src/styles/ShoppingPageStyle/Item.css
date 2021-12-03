@@ -1,5 +1,5 @@
 
-.item{
+.acf-item{
     margin: 20px;
 	display: flex;
 	flex-direction: column;
@@ -9,14 +9,14 @@
     border-radius: 20px;
     
 }
-.item-img{
+.acf-item-img{
     width: 250px;
     height: 250px;
     border-radius: 20px;
     cursor: pointer;
     align-self: center;
 }
-.item-price{
+.acf-item-price{
     background-color: rgba(215, 202, 160, 0.9);
     border-top-right-radius: 20px;
     border-bottom-left-radius: 20px;
@@ -26,8 +26,18 @@
     left: 0;
     
 }
-.item-name{
+.acf-item-name{
     text-align: center;
     text-transform: uppercase;
+    
+}
+.acf-item-addButton{
+    width: 40%;
+    margin: auto;
+    border-radius: 2rem;
+}
+.acf-item-addButton:active {
+    background-color: rgba(215, 202, 160, 0.9);
+
     
 }

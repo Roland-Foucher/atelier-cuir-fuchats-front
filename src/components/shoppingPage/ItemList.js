@@ -6,8 +6,8 @@ import { itemToSale } from '../../datas/itemToSale';
 function ItemList({activeCategory}){
 
 
-    return <section className="shopping-item">
-        <ul className="item-list">
+    return <section className="acf-shopping-item">
+        <ul className="acf-item-list">
             {itemToSale.map(({name, cover, id, price, category}) => 
                !activeCategory || activeCategory === category ? (
                     <div key={id}>
@@ -17,7 +17,9 @@ function ItemList({activeCategory}){
                             price = {price}
                         >
                         </Item>
+                        
                     </div>
+                    
                 ) : null
             )}
         </ul>

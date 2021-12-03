@@ -2,3 +2,7 @@
     background-color: antiquewhite;
     padding: 2rem;
 }
+.acf-aside select{
+    border-radius: 2em;
+}
+
