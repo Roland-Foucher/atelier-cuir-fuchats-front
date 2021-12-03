@@ -16,18 +16,9 @@
   padding: 30px;
   margin: 0;
 }
+.acf-footer-list-item:hover{
+  font-weight: bold;
+}
 .acf-footer-admin{
     margin-right: 30px;
-}
-.acf-footer-list-item:hover {
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
-
-a:link {
-  text-decoration: none;
-  color: black;
-}
-a:visited {
-  color: black;
 }
