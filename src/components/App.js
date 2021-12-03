@@ -6,7 +6,9 @@ import '../styles'
 function App() {
   return (
     <div>
-      
+      <Banner></Banner>
+      <Nav></Nav>
+      <Footer></Footer>
     </div>
   );
 }
