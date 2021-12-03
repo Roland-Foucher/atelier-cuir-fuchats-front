@@ -1,17 +1,27 @@
 import '../../styles/ShoppingPageStyle/Aside.css'
 
 
-function Aside(){
+
+function Aside({activeCategory, categories, setActiveCategory}){
+
+   
+
     return <aside className="acf-aside">
         <p>Filtrer les articles</p>
-        <div className="acf-filtre-selector">
-            <select name="typeOfItem"  id= "typeOfItem">
+        
+        <select name="typeOfItem"  
+                id= "typeOfItem"   
+                className="acf-filtre-selector"
+                option = {activeCategory}
+                onChange = {(e) => setActiveCategory(e.target.value)} >
             
-                <option value="all">tous les articles</option>
-                <option value="sac">Les sacs</option>
-                <option value="cartable">Les sacoches et cartables</option>
-            </select>
-        </div>
+            <option value=''>tous les articles</option>
+            {categories.map((cat) =>
+                <option value={cat} key = {cat}>{cat}</option>
+            )}
+
+        </select>
+        
 
     </aside>
 }

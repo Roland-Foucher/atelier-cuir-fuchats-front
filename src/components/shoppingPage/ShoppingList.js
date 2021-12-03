@@ -1,12 +1,34 @@
 import '../../styles/ShoppingPageStyle/ShoppingList.css'
 import Aside from './Aside';
 import ItemList from './ItemList';
+import { useState } from 'react'
+import { itemToSale } from '../../datas/itemToSale';
 
 function ShoppingList(){
+    const [activeCategory, setActiveCategory] = useState('')
+    
+    var categories = [];
+    itemToSale.forEach((el) =>{
+        if ((!categories.includes(el.category))){
+            categories.push(el.category)
+        }
+    })
+
+
     return(
         <main className="ShoppingList">
-            <Aside></Aside>
-            <ItemList></ItemList>
+            <Aside
+            activeCategory = {activeCategory}
+            setActiveCategory = {setActiveCategory}
+            categories = {categories}
+            >
+
+            </Aside>
+            <ItemList
+            activeCategory = {activeCategory}
+            >
+
+            </ItemList>
         </main>
     )
 }
