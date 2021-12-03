@@ -7,7 +7,7 @@ function Banner(){
             <img src={logo} alt="icone sac cuir" className = 'acf-logo'/>
             <h1 className = 'acf-titre'>Atelier Cuir Les Fuchats</h1>
         </header>
-        )
+    )
     
 }
 export default Banner;
