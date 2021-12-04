@@ -1,0 +1,19 @@
+.acf-item-modal{
+    width: 800px;
+    height: 400px;
+    position: fixed;
+    top: 20%;
+    left: 30%;
+    display : flex;
+    z-index: 20;
+    border: 2px solid rgba(50, 50, 50, 0.5);
+    padding: 10px;
+    background-color: antiquewhite;
+}
+.acf-item-modal-left{
+    margin: auto;
+}
+
+.acf-item-modal-comment{
+   margin: auto;
+}

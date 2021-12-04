@@ -13,7 +13,7 @@ export const itemToSale = [
 		price: 70,
 		vendu: false,
 		fullName : 'Petit sac à main en cuir de veau rouge',
-		comment : 'Taille : largeur 21cm, hauteur 15 cm, profondeur 5,5 cm. /n Petit sac rouge vif, de forme arrondie, en cuir de veau souple et léger. On peut y glisser son téléphone, son porte-monnaie, et dans la poche intérieur plaquée, ses clés ou ses cartes. /n Fermeture à glissière sur le dessus. /n Bandoulière réglable jusqu\'à 115 cm.'
+		comment : 'Taille : largeur 21cm, hauteur 15 cm, profondeur 5,5 cm./n Petit sac rouge vif, de forme arrondie, en cuir de veau souple et léger. On peut y glisser son téléphone, son porte-monnaie, et dans la poche intérieur plaquée, ses clés ou ses cartes. /n Fermeture à glissière sur le dessus. /n Bandoulière réglable jusqu\'à 115 cm.'
 	},
     {
 		name: 'sac en cuir marron',
@@ -33,7 +33,7 @@ export const itemToSale = [
 		vendu: false,
 		price: 220,
 		fullName : 'Sac Michèle carré marron en cuir à tannage végétal',
-		comment : 'Taille : largeur 28 cm, hauteur 25 cm, profondeur 9 cm. /n Grand sac à main style sacoche, en cuir à tannage végétal. Une poche intérieure plaquée en cuir souple. Bandoulière réglable en longueur. /n Entièrement cousu main. Motifs sur le devant réalisés à l\'aide de matoirs.'
+		comment : 'Taille : largeur 28 cm, hauteur 25 cm, profondeur 9 cm. </b> Grand sac à main style sacoche, en cuir à tannage végétal. Une poche intérieure plaquée en cuir souple. Bandoulière réglable en longueur. /n Entièrement cousu main. Motifs sur le devant réalisés à l\'aide de matoirs.'
 	},
 	{
 		name: 'Cartable en cuir marron clair',

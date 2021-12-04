@@ -13,10 +13,13 @@
     width: 250px;
     height: 250px;
     border-radius: 20px;
-    cursor: pointer;
     align-self: center;
+    
+}
+.acf-item-img-animation{
     animation-name: deZoom;
     animation-duration: 0.5s;
+    cursor: pointer;
 }
 @keyframes zoom {
     from {width: 250px; height: 250px;}
@@ -27,7 +30,7 @@
     to {width: 250px; height: 250px;}
 }
 
-.acf-item-img:hover{
+.acf-item-img-animation:hover{
     animation-name: zoom;
     animation-duration: 0.5s;
     height: 270px;
@@ -56,6 +59,7 @@
     width: 40%;
     margin: auto;
     border-radius: 2rem;
+    cursor: pointer;
 }
 .acf-item-addButton:active {
     background-color: rgba(215, 202, 160, 0.9);
