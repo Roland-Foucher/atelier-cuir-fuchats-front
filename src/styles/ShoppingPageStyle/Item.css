@@ -16,29 +16,16 @@
     align-self: center;
     
 }
+
 .acf-item-img-animation{
     animation-name: deZoom;
-    animation-duration: 0.5s;
+    transition: transform ease-in-out 0.3s;
     cursor: pointer;
-}
-@keyframes zoom {
-    from {width: 250px; height: 250px;}
-    to {width: 270px; height: 270px;}
-  }
-@keyframes deZoom {
-    from {width: 270px; height: 270px;}
-    to {width: 250px; height: 250px;}
-}
 
+}
 .acf-item-img-animation:hover{
-    animation-name: zoom;
-    animation-duration: 0.5s;
-    height: 270px;
-    width: 270px;
+    transform: scale(1.1);
 }
-
-
-
 
 .acf-item-price{
     background-color: rgba(215, 202, 160, 0.9);

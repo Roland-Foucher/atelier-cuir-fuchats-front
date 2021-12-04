@@ -6,11 +6,14 @@ function Item({cover, name, price, setActiveModaleItem, setModaleItemOpen,modale
         setActiveModaleItem(name)
         setModaleItemOpen(true)
     }
+
+    
     return <li className="acf-item">
         <span className="acf-item-price">{price}€</span>
         <img src={cover}  
             alt={`${name} cover`} 
             className = {modaleItemOpen ? "acf-item-img" : "acf-item-img acf-item-img-animation"}
+            
             
             onClick = {() => modalConfiguration(name)} />
         <p className = "acf-item-name">{name}</p>

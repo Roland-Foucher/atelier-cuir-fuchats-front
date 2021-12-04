@@ -1,11 +1,12 @@
 import '../../styles/ShoppingPageStyle/ItemModal.css'
+import onClickOutside from "react-onclickoutside";
 
 
 function ItemModal({cover, name, price, fullName, comment, setModaleItemOpen}){
 
-    
+    ItemModal.handleClickOutside = () => setModaleItemOpen(false)
     return (
-    <article className="acf-item-modal" onCancel = {() => setModaleItemOpen(false)}>
+    <article className="acf-item-modal">
         
         <span className="acf-item-modal-close" onClick = {() => setModaleItemOpen(false)}>X</span>
         <div className="acf-item acf-item-modal-left" > 
@@ -29,5 +30,10 @@ function ItemModal({cover, name, price, fullName, comment, setModaleItemOpen}){
     </article>
     )
 }
+const clickOutsideConfig = {
+    handleClickOutside: () => ItemModal.handleClickOutside,
 
-export default ItemModal;
+};
+
+
+export default onClickOutside(ItemModal, clickOutsideConfig);
