@@ -26,6 +26,7 @@ function ItemList({activeCategory}){
                         />
                         {modaleItemOpen && (
                             activeModaleItem === name &&(
+                                
                                 <ItemModal
                                     name = {name}
                                     cover = {cover}
