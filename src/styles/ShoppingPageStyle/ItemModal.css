@@ -10,17 +10,20 @@
     padding: 10px;
     background-color: antiquewhite;
 }
-.acf-item-modal input{
-   opacity: 0;
-   position: absolute;
-}
+
 .acf-item-modal-left{
     margin: auto;
 }
 
 .acf-item-modal-comment{
-   margin: auto;
+   margin-top: 2rem;
+   text-align: justify;
+   padding-right: 2em;
 }
+.acf-item-modal-comment h2{
+    margin-bottom: 2em;
+}
+
 .acf-item-modal-close{
     cursor: pointer;
     position: absolute;

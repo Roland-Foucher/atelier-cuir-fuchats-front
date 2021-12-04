@@ -1,6 +1,6 @@
 import '../../styles/ShoppingPageStyle/Item.css'
 
-function Item({cover, name, price, setActiveModaleItem, setModaleItemOpen}){
+function Item({cover, name, price, setActiveModaleItem, setModaleItemOpen,modaleItemOpen}){
 
     function modalConfiguration(name){
         setActiveModaleItem(name)
@@ -10,7 +10,8 @@ function Item({cover, name, price, setActiveModaleItem, setModaleItemOpen}){
         <span className="acf-item-price">{price}€</span>
         <img src={cover}  
             alt={`${name} cover`} 
-            className = "acf-item-img acf-item-img-animation" 
+            className = {modaleItemOpen ? "acf-item-img" : "acf-item-img acf-item-img-animation"}
+            
             onClick = {() => modalConfiguration(name)} />
         <p className = "acf-item-name">{name}</p>
         <button className = "acf-item-addButton">ajouter</button>

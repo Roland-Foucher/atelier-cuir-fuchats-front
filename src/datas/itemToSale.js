@@ -13,7 +13,7 @@ export const itemToSale = [
 		price: 70,
 		vendu: false,
 		fullName : 'Petit sac à main en cuir de veau rouge',
-		comment : 'Taille : largeur 21cm, hauteur 15 cm, profondeur 5,5 cm./n Petit sac rouge vif, de forme arrondie, en cuir de veau souple et léger. On peut y glisser son téléphone, son porte-monnaie, et dans la poche intérieur plaquée, ses clés ou ses cartes. /n Fermeture à glissière sur le dessus. /n Bandoulière réglable jusqu\'à 115 cm.'
+		comment : ['Taille : largeur 21cm, hauteur 15 cm, profondeur 5,5 cm.', 'Petit sac rouge vif, de forme arrondie, en cuir de veau souple et léger. On peut y glisser son téléphone, son porte-monnaie, et dans la poche intérieur plaquée, ses clés ou ses cartes', 'Fermeture à glissière sur le dessus.', 'Bandoulière réglable jusqu\'à 115 cm.']
 	},
     {
 		name: 'sac en cuir marron',
@@ -23,7 +23,7 @@ export const itemToSale = [
 		price: 250,
 		vendu: true,
 		fullName : 'Sac en cuir Pascale marron',
-		comment : 'Taille : largeur 33 cm, hauteur 32 cm, profondeur 9 cm /n Grand sac en cuir à tannage végétal rigide. Peut se porter en sac à dos ou bandoulière grâce à sa bandoulière amovible et réglable en longueur, et à ses bretelles également amovibles.  /n Une poche extérieure de 2 cm d\'épaisseur. /n Entièrement cousu main. Motifs sur le devant réalisés à l\'aide de matoirs.'
+		comment : ['Taille : largeur 33 cm, hauteur 32 cm, profondeur 9 cm', 'Grand sac en cuir à tannage végétal rigide. Peut se porter en sac à dos ou bandoulière grâce à sa bandoulière amovible et réglable en longueur, et à ses bretelles également amovibles.', 'Une poche extérieure de 2 cm d\'épaisseur.', 'Entièrement cousu main. Motifs sur le devant réalisés à l\'aide de matoirs.']
 	},
 	{
 		name: 'sac carré à tanage végétal',
@@ -33,17 +33,17 @@ export const itemToSale = [
 		vendu: false,
 		price: 220,
 		fullName : 'Sac Michèle carré marron en cuir à tannage végétal',
-		comment : 'Taille : largeur 28 cm, hauteur 25 cm, profondeur 9 cm. </b> Grand sac à main style sacoche, en cuir à tannage végétal. Une poche intérieure plaquée en cuir souple. Bandoulière réglable en longueur. /n Entièrement cousu main. Motifs sur le devant réalisés à l\'aide de matoirs.'
+		comment : ['Taille : largeur 28 cm, hauteur 25 cm, profondeur 9 cm.', 'Grand sac à main style sacoche, en cuir à tannage végétal. Une poche intérieure plaquée en cuir souple. Bandoulière réglable en longueur.', 'Entièrement cousu main. Motifs sur le devant réalisés à l\'aide de matoirs.']
 	},
 	{
-		name: 'Cartable en cuir marron clair',
+		name: 'Cartable marron clair',
 		category: 'cartable',
 		id: '4',
 		cover: cartableMarron,
 		price: 220,
 		vendu: false,
 		fullName : 'Cartable en cuir marron clair',
-		comment : 'Cartable en cuir, entièrement cousu main. /n Sa bandoulière amovible grâce à des mousquetons est réglable en longueur. /n Il possède une poche extérieure, et 2 compartiments à soufflet intérieures. /n Dimensions : hauteur 30 cm, largeur 38 cm, profondeur 12 cm (2 compartiments de 6 cm)'
+		comment : ['Cartable en cuir, entièrement cousu main.', 'Sa bandoulière amovible grâce à des mousquetons est réglable en longueur.', 'Il possède une poche extérieure, et 2 compartiments à soufflet intérieures.', 'Dimensions : hauteur 30 cm, largeur 38 cm, profondeur 12 cm (2 compartiments de 6 cm)']
 	},
 	{
 		name: 'Sacoche homme marron',
@@ -53,7 +53,7 @@ export const itemToSale = [
 		price: 110,
 		vendu: false,
 		fullName : 'Sacoche homme marron',
-		comment : 'Sacoche en cuir à tannage végétal d\'environ 2mm d\'épaisseur, entièrement cousue main. /n Légère, elle pèse moins de 500 g. Sa bandoulière est réglable en longueur jusqu\'à 140 cm. /n Pratique, elle possède une poche plaquée intérieure, et une poche à soufflet extérieure. /n Sa fermeture par tourniqué est en laiton vieilli. /n Dimensions : hauteur 22 cm, largeur 18 cm, profondeur 8 cm /n Poche frontale : hauteur 17 cm, largeur 14 cm, profondeur 3 cm'
+		comment : ['Sacoche en cuir à tannage végétal d\'environ 2mm d\'épaisseur, entièrement cousue main.', 'Légère, elle pèse moins de 500 g. Sa bandoulière est réglable en longueur jusqu\'à 140 cm.', 'Pratique, elle possède une poche plaquée intérieure, et une poche à soufflet extérieure.', 'Sa fermeture par tourniqué est en laiton vieilli.', 'Dimensions : hauteur 22 cm, largeur 18 cm, profondeur 8 cm', 'Poche frontale : hauteur 17 cm, largeur 14 cm, profondeur 3 cm']
 	},
 
 

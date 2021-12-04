@@ -22,6 +22,7 @@ function ItemList({activeCategory}){
                             price = {price}
                             setActiveModaleItem = {setActiveModaleItem}
                             setModaleItemOpen = {setModaleItemOpen}
+                            modaleItemOpen = {modaleItemOpen}
                             
                         />
                         {modaleItemOpen && (
@@ -33,7 +34,7 @@ function ItemList({activeCategory}){
                                     price = {price}
                                     fullName = {fullName}
                                     comment = {comment}
-                                    setActiveModaleItem = {setActiveModaleItem}
+                                    setModaleItemOpen = {setModaleItemOpen}
                                 />
                             )
                         )}
