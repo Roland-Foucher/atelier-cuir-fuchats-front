@@ -15,7 +15,28 @@
     border-radius: 20px;
     cursor: pointer;
     align-self: center;
+    animation-name: deZoom;
+    animation-duration: 0.5s;
 }
+@keyframes zoom {
+    from {width: 250px; height: 250px;}
+    to {width: 270px; height: 270px;}
+  }
+@keyframes deZoom {
+    from {width: 270px; height: 270px;}
+    to {width: 250px; height: 250px;}
+}
+
+.acf-item-img:hover{
+    animation-name: zoom;
+    animation-duration: 0.5s;
+    height: 270px;
+    width: 270px;
+}
+
+
+
+
 .acf-item-price{
     background-color: rgba(215, 202, 160, 0.9);
     border-top-right-radius: 20px;
@@ -38,6 +59,6 @@
 }
 .acf-item-addButton:active {
     background-color: rgba(215, 202, 160, 0.9);
-
-    
 }
+
+
