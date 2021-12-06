@@ -1,9 +1,9 @@
 .acf-item-modal{
-    width: 800px;
-    height: 400px;
+    width: 60%;
+    height: 60%;
     position: fixed;
-    top: 20%;
-    left: 30%;
+    top: 25%;
+    left: 25%;
     display : flex;
     z-index: 20;
     border: 2px solid rgba(50, 50, 50, 0.5);
