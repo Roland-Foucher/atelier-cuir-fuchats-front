@@ -3,6 +3,8 @@ import { useLocation } from "react-router";
 
 import '../styles/Nav.css'
 
+// On doit utiliser useLocation avec le router de react car l'url ne cahnge pas pour le navigateur
+// impossible d'utiliser windows.location.pathname
 
 function Nav(){
     const currentUrl = useLocation();

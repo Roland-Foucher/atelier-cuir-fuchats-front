@@ -4,6 +4,8 @@ import ItemList from './ItemList';
 import { useState } from 'react'
 import { itemToSale } from '../../datas/itemToSale';
 
+// generate array categorie et state activeCategory
+
 function ShoppingList(){
     const [activeCategory, setActiveCategory] = useState('')
     

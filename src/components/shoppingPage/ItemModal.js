@@ -1,6 +1,9 @@
 import '../../styles/ShoppingPageStyle/ItemModal.css'
 import onClickOutside from "react-onclickoutside";
 
+//
+// Le modal des Item reprend la base d'affichage des article avec des comentaires supplementaires (en array dans le fichier data)
+//
 
 function ItemModal({cover, name, price, fullName, comment, setModaleItemOpen}){
 
