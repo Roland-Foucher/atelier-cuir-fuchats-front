@@ -21,5 +21,8 @@
 .acf-navitem:hover{
     background-color: rgba(0, 0, 0, 0.1);
 }
+.acf-navitem-current{
+    background-color: rgba(0, 0, 0, 0.1);
+}
 
     
