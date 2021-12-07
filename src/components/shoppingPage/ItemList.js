@@ -13,10 +13,11 @@ function ItemList({activeCategory}){
     // list tous les item avecun map de l'array itemToSole
     // tri les item par active category (ou l'abseance d'active category pour le general)
     // le modal fait partie du div, on recupère le name pour l'afficher
+
   
     return <section className="acf-shopping-item">
         <ul className="acf-item-list">
-            {itemToSale.map(({name, cover, id, price, category, fullName, comment}) => 
+            {itemToSale.map(({name, cover, id, price, category, fullName, comment, allCover}) => 
                !activeCategory || activeCategory === category ? (
                     <div key={id}>
                         <Item
@@ -33,10 +34,10 @@ function ItemList({activeCategory}){
                                 
                                 <ItemModal
                                     name = {name}
-                                    cover = {cover}
                                     price = {price}
                                     fullName = {fullName}
                                     comment = {comment}
+                                    allCover = {allCover}
                                     setModaleItemOpen = {setModaleItemOpen}
                                 />
                             )

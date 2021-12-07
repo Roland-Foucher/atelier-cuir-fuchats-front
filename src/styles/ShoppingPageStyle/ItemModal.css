@@ -15,6 +15,7 @@
     margin: auto;
 }
 
+
 .acf-item-modal-comment{
    margin-top: 2rem;
    text-align: justify;
@@ -29,6 +30,37 @@
     position: absolute;
     top: 1em;
     right: 1em;
+}
+.acf-item-modal-imgGlobal{
+    display: flex;
+}
 
-   
+.acf-item-modal-arrow{ 
+    height: 2.5rem;
+    margin: auto;
+    opacity: 0.5;
+}
+
+.acf-item-modal-arrow:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+
+/* on Zoom*/
+.acf-item-modal-comment-zoom{
+    display: none;
+}
+
+.acf-item-modal-imgGlobal-zoom{
+    scale : 2.2;
+}
+
+.acf-item-modal-zoom{
+    background-color: rgba(50, 50, 50, 0);
+    border-color: rgba(50, 50, 50, 0);
+}
+
+.acf-item-modal-close-zoom{
+    scale: 2;
 }

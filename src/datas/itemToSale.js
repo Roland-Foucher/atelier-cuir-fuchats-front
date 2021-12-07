@@ -4,12 +4,20 @@ import sacCarreMarron from '../assets/sacCarreMarron/sac-cuir-artisanal-rectangl
 import cartableMarron from '../assets/cartableMarronClair/cartable-cuir-marron-clair.jpeg'
 import sacocheMarron from '../assets/sacocheMarron/sacoche-homme-cuir-marron-artisanat-fuchats.jpeg'
 
+import sacRougeOuvert from '../assets/sacRouge/Petit-sac-rouge-rond-veau-ouvert.jpeg'
+import sacRougeFace from '../assets/sacRouge/Petit-sac-rouge-rond-veau-face.jpeg'
+import sacRougeRecul from '../assets/sacRouge/Petit-sac-rouge-rond-veau-recul.jpeg'
+
+import sacMarronDos from '../assets/sacPascale/Sac-cuir-artisanal-marron-pascale-dos.jpeg'
+import sacMarronOuvert from '../assets/sacPascale/Sac-cuir-artisanal-marron-pascale-ouvert.jpeg'
+
 export const itemToSale = [
 	{
 		name: 'sac en cuir de veau rouge',
 		category: 'sac',
 		id: '1',
 		cover: sacRouge,
+		allCover : [sacRouge, sacRougeOuvert, sacRougeFace, sacRougeRecul],
 		price: 70,
 		vendu: false,
 		fullName : 'Petit sac à main en cuir de veau rouge',
@@ -20,6 +28,7 @@ export const itemToSale = [
 		category: 'sac',
 		id: '2',
 		cover: sacMarron,
+		allCover: [sacMarron, sacMarronDos, sacMarronOuvert],
 		price: 250,
 		vendu: true,
 		fullName : 'Sac en cuir Pascale marron',
