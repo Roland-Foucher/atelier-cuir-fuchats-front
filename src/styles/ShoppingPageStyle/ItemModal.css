@@ -45,6 +45,15 @@
     opacity: 1;
     cursor: pointer;
 }
+.acf-item-modal-zoom{
+    width: 10%;
+    position: absolute;
+    right : 10%;
+}
+
+.acf-item-modal-zoom:hover{
+    cursor: pointer;
+}
 
 
 /* on Zoom*/
@@ -53,7 +62,14 @@
 }
 
 .acf-item-modal-imgGlobal-zoom{
-    scale : 2.2;
+    scale : 2.7;
+    position: fixed;
+    left: 40%
+}
+
+.acf-item-modal-arrow-zoom{
+    opacity: 1;
+    scale: 0.5;
 }
 
 .acf-item-modal-zoom{
@@ -62,5 +78,5 @@
 }
 
 .acf-item-modal-close-zoom{
-    scale: 2;
+    display: none;
 }
