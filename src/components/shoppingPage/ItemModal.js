@@ -49,23 +49,34 @@ function ItemModal({name, price, fullName, comment, setModaleItemOpen, allCover}
     return (
     <article className={checkZoomClassName("acf-item-modal acf-item-modal-zoom", "acf-item-modal")} >
         
-        <span className=  {checkZoomClassName("acf-item-modal-close acf-item-modal-close-zoom","acf-item-modal-close")} onClick = {() => setModaleItemOpen(false)}>X</span>
-        <div className= "acf-item acf-item-modal-left" onClick = {() => setZoomImage(true)}> 
+        <span   
+            className=  {checkZoomClassName("acf-item-modal-close acf-item-modal-close-zoom","acf-item-modal-close")} 
+            onClick = {() => setModaleItemOpen(false)}
+            >X</span>
+
+        <div className= "acf-item acf-item-modal-left"> 
             
             <span className="acf-item-price">{price}€</span>
+            <img src="https://img.icons8.com/ios/50/000000/expand--v1.png" 
+                className= "acf-item-modal-zoom" 
+                alt = "zoom"
+                onClick = {() => setZoomImage(true)}
+                />
             <div className = {checkZoomClassName("acf-item-modal-imgGlobal acf-item-modal-imgGlobal-zoom", "acf-item-modal-imgGlobal")}>
-                <img src="https://img.icons8.com/ios/50/000000/circled-chevron-left.png" 
+
+                <img 
+                    src={checkZoomClassName("https://img.icons8.com/flat-round/64/000000/left--v1.png", "https://img.icons8.com/ios/50/000000/circled-chevron-left.png")}
                     alt= "fleche gauche" 
-                    className="acf-item-modal-arrow acf-item-modal-leftArrow"
+                    className={checkZoomClassName("acf-item-modal-arrow acf-item-modal-arrow-zoom acf-item-modal-leftArrow","acf-item-modal-arrow acf-item-modal-leftArrow")}
                     onClick = {() => leftArrow()}
                     />
                 <img src={coverArray[coverSelect]}  
                     alt={`${name} cover`} 
                     className = "acf-item-img" 
                 />             
-                <img src="https://img.icons8.com/ios/50/000000/circled-chevron-right.png" 
+                <img src={checkZoomClassName("https://img.icons8.com/flat-round/64/000000/right--v1.png","https://img.icons8.com/ios/50/000000/circled-chevron-right.png" )}
                     alt= "fleche droite" 
-                    className="acf-item-modal-arrow acf-item-modal-rightArrow"
+                    className={checkZoomClassName("acf-item-modal-arrow acf-item-modal-arrow-zoom acf-item-modal-rightArrow","acf-item-modal-arrow acf-item-modal-righrArrow")}
                     onClick = {() => rightArrow()}
                     />
             </div>
