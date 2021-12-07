@@ -1,13 +1,11 @@
 .acf-item-modal{
     width: 60%;
-    height: 60%;
     position: fixed;
     top: 25%;
     left: 25%;
     display : flex;
     z-index: 20;
     border: 2px solid rgba(50, 50, 50, 0.5);
-    padding: 10px;
     background-color: antiquewhite;
 }
 
@@ -17,7 +15,7 @@
 
 
 .acf-item-modal-comment{
-   margin-top: 2rem;
+   margin: auto;
    text-align: justify;
    padding-right: 2em;
 }
