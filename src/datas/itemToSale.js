@@ -1,13 +1,20 @@
-import sacRouge from '../assets/sacRouge/Petit-sac-rouge-rond-veau-dessus.jpeg'
-import sacMarron from '../assets/sacPascale/Sac-cuir-artisanal-marron-pascale-devant.jpeg'
-import sacCarreMarron from '../assets/sacCarreMarron/sac-cuir-artisanal-rectangle-marron.jpeg'
-import cartableMarron from '../assets/cartableMarronClair/cartable-cuir-marron-clair.jpeg'
-import sacocheMarron from '../assets/sacocheMarron/sacoche-homme-cuir-marron-artisanat-fuchats.jpeg'
 
+
+import sacCarreMarron from '../assets/sacCarreMarron/sac-cuir-artisanal-rectangle-marron.jpeg'
+
+import cartableMarron from '../assets/cartableMarronClair/cartable-cuir-marron-clair.jpeg'
+import cartableMarronProfil from '../assets/cartableMarronClair/cartable-cuir-marron-clair-profil.jpeg'
+
+import sacocheMarron from '../assets/sacocheMarron/sacoche-homme-cuir-marron-artisanat-fuchats.jpeg'
+import sacocheMarronOuvert from '../assets/sacocheMarron/sacoche-homme-cuir-marron-artisanat-ouverte.jpeg'
+import sacocheMarronProfil from '../assets/sacocheMarron/sacoche-homme-cuir-marron-artisanat-profil.jpeg'
+
+import sacRouge from '../assets/sacRouge/Petit-sac-rouge-rond-veau-dessus.jpeg'
 import sacRougeOuvert from '../assets/sacRouge/Petit-sac-rouge-rond-veau-ouvert.jpeg'
 import sacRougeFace from '../assets/sacRouge/Petit-sac-rouge-rond-veau-face.jpeg'
 import sacRougeRecul from '../assets/sacRouge/Petit-sac-rouge-rond-veau-recul.jpeg'
 
+import sacMarron from '../assets/sacPascale/Sac-cuir-artisanal-marron-pascale-devant.jpeg'
 import sacMarronDos from '../assets/sacPascale/Sac-cuir-artisanal-marron-pascale-dos.jpeg'
 import sacMarronOuvert from '../assets/sacPascale/Sac-cuir-artisanal-marron-pascale-ouvert.jpeg'
 
@@ -39,6 +46,7 @@ export const itemToSale = [
 		category: 'sac',
 		id: '3',
 		cover: sacCarreMarron,
+		allCover: [sacCarreMarron],
 		vendu: false,
 		price: 220,
 		fullName : 'Sac Michèle carré marron en cuir à tannage végétal',
@@ -49,6 +57,7 @@ export const itemToSale = [
 		category: 'cartable',
 		id: '4',
 		cover: cartableMarron,
+		allCover: [cartableMarron, cartableMarronProfil],
 		price: 220,
 		vendu: false,
 		fullName : 'Cartable en cuir marron clair',
@@ -59,6 +68,7 @@ export const itemToSale = [
 		category: 'cartable',
 		id: '5',
 		cover: sacocheMarron,
+		allCover: [sacocheMarron, sacocheMarronOuvert, sacocheMarronProfil],
 		price: 110,
 		vendu: false,
 		fullName : 'Sacoche homme marron',
