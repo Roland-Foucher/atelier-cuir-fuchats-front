@@ -13,3 +13,22 @@ justify-content: flex-end;
     padding: 2rem;
     margin-right: 100px;
 }
+.acf-burger{
+    display: none;
+}
+
+/*MEDIA QUERIES*/
+@media screen and (max-width: 440px){
+    .acf-header{
+        padding-left: 2em ;
+    }
+    .acf-titre{
+        margin-right: 0;
+    }
+    .acf-burger{
+        display: flex;
+        width: 40px;
+        margin-top: auto;
+        cursor: pointer;
+    }
+}

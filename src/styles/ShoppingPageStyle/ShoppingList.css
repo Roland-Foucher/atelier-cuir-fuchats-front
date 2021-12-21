@@ -2,4 +2,11 @@
     display: flex;
     
 }
+
+/*MEDIA QUERIES*/
+@media screen and (max-width: 440px){
+    .ShoppingList{
+        display: block;
+    }
+}
     

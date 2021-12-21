@@ -12,6 +12,14 @@
 .acf-item-modal-left{
     margin: auto;
 }
+.acf-item-modal-img{
+    width: 60%;
+    height: 60%;
+    border-radius: 20px;
+    align-self: center;
+    
+}
+
 
 
 .acf-item-modal-comment{
@@ -60,9 +68,11 @@
 }
 
 .acf-item-modal-imgGlobal-zoom{
-    scale : 2.7;
+    scale : 1.1;
     position: fixed;
-    left: 40%
+    left: 10%;
+    top: 5%;
+    z-index: 1;
 }
 
 .acf-item-modal-arrow-zoom{
@@ -76,5 +86,55 @@
 }
 
 .acf-item-modal-close-zoom{
-    display: none;
+    cursor: pointer;
+    position:fixed;
+    margin-right: 10px;
+    margin-top: 10px;
+    font-size: larger;
+    z-index: 2;
+
+}
+
+/*MEDIA QUERIES*/
+
+@media screen and (max-width: 768px) {
+    .acf-item-modal{
+        flex-direction: column;
+        top: 10%;
+    }
+    .acf-item-modal-comment{
+           
+        padding-left: 10px;
+    }
+}
+@media screen and (max-width: 440px){
+    .acf-item-modal{
+        width: 100%;
+        left: 0;
+        flex-direction: column;
+        
+    }
+    .acf-item-modal-left{
+        padding-bottom: 0;
+        
+    }
+    .acf-item-modal-comment h2{
+        margin-bottom: 0;
+    }
+    .acf-item-modal-comment{
+        font-size: small;
+        padding-left: 10px;
+    }
+
+    .acf-item-modal-zoom{
+       display: none;
+    }
+    .acf-item-modal-close{
+        cursor: pointer;
+        position:static;
+        text-align: end;
+        padding-right: 10px;
+        padding-top: 10px;
+    }
+    
 }

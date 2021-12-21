@@ -6,12 +6,13 @@ import '../styles/Nav.css'
 // On doit utiliser useLocation avec le router de react car l'url ne cahnge pas pour le navigateur
 // impossible d'utiliser windows.location.pathname
 
-function Nav(){
+function Nav({showMenu}){
     const currentUrl = useLocation();
+    console.log(showMenu)
     return (
-        <nav className = "acf-nav">
+        <nav className = {showMenu ? "acf-nav" : "acf-nav-none"}>
             <ul className = "acf-navlist">
-                <li className = {currentUrl.pathname === "/" ? "acf-navitem acf-navitem-current" : "acf-navitem"}><Link to="/">La Boutique</Link></li>
+                <li className = {currentUrl.pathname === "/" ? "acf-navitem acf-navitem-current " : "acf-navitem"}><Link to="/">La Boutique</Link></li>
                 <li className = {currentUrl.pathname === "/workshop" ? "acf-navitem acf-navitem-current" : "acf-navitem"}><Link to="workshop">L'Atelier</Link></li>
                 <li className = {currentUrl.pathname === "/news" ? "acf-navitem acf-navitem-current" : "acf-navitem"}><Link to= "news">Actualité</Link></li>
                 <li className = {currentUrl.pathname === "/photo" ? "acf-navitem acf-navitem-current" : "acf-navitem"}><Link to= "photo">Galerie photo</Link></li>

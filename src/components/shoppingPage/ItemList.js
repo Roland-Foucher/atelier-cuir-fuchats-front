@@ -13,7 +13,7 @@ function ItemList({activeCategory}){
     // list tous les item avecun map de l'array itemToSole
     // tri les item par active category (ou l'abseance d'active category pour le general)
     // le modal fait partie du div, on recupère le name pour l'afficher
-
+    
   
     return <section className="acf-shopping-item">
         <ul className="acf-item-list">

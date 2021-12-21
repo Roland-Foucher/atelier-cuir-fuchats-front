@@ -6,3 +6,11 @@
     border-radius: 2em;
 }
 
+/*MEDIA QUERIES*/
+@media screen and (max-width: 440px){
+    .acf-aside{
+       text-align: center;
+    }
+  
+}
+

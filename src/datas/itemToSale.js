@@ -12,7 +12,7 @@ import sacocheMarronProfil from '../assets/sacocheMarron/sacoche-homme-cuir-marr
 import sacRouge from '../assets/sacRouge/Petit-sac-rouge-rond-veau-dessus.jpeg'
 import sacRougeOuvert from '../assets/sacRouge/Petit-sac-rouge-rond-veau-ouvert.jpeg'
 import sacRougeFace from '../assets/sacRouge/Petit-sac-rouge-rond-veau-face.jpeg'
-import sacRougeRecul from '../assets/sacRouge/Petit-sac-rouge-rond-veau-recul.jpeg'
+import sacRougeRecul from '../assets/sacRouge/Petit-sac-rouge-rond-veau-recul.png'
 
 import sacMarron from '../assets/sacPascale/Sac-cuir-artisanal-marron-pascale-devant.jpeg'
 import sacMarronDos from '../assets/sacPascale/Sac-cuir-artisanal-marron-pascale-dos.jpeg'

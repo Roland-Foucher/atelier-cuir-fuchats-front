@@ -22,3 +22,23 @@
 .acf-footer-admin{
     margin-right: 30px;
 }
+
+/*MEDIA QUERIES*/
+@media screen and (max-width: 440px){
+  .acf-footer{
+    flex-direction: column;
+    text-align: center;
+  }
+  .acf-footer-list{
+    flex-direction: column;
+  }
+  .acf-footer-admin{
+    margin: 0;
+  }
+  .acf-footer-list-item{
+    padding : 15px;
+    padding-left: 0;
+  }
+
+
+}
