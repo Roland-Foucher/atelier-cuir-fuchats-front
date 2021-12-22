@@ -8,10 +8,13 @@ import Workshop from './workshopPage/Workshop';
 import Contact from './contactPage/Contact';
 import Photo from './photoPage/Photo';
 import News from './newsPage/News';
+import UseConditions from './useConditionsPage/UseConditions';
 import NotFound from './NotFound';
 
 import '../styles/App.css' 
 import { useState } from 'react';
+import Admin from './adminPage/Admin';
+
 
 
 // fonction App utilise Route de react
@@ -36,11 +39,11 @@ function App() {
           <Route exact path="/photo" element={<Photo />} />
           <Route exact path="/news" element={<News />} />
           <Route exact path="/contact" element={<Contact />} />
+          <Route exact path="/mention-legal" element={<UseConditions />} />
+          <Route exact path="/admin" element={<Admin />} />
           <Route path= "*" element={<NotFound />} />
         </Routes>
         <Footer />
-      
-      
     </div>
   );
 }
