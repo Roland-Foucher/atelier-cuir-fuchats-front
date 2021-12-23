@@ -10,11 +10,11 @@ import '../../styles/Workshop/Workshop.css'
 
 function Workshop(){
     return <main className='acf-workshop-page'>
-        <div className='acf-worshop-head acf-workshop-block'>
+        <div className='acf-workshop-head acf-workshop-block'>
             <h1 className='acf-workshop-title-main'>L'Atelier Cuir Les Fuchats</h1>
             <img src={machine} alt="machine a coudre" className='acf-workshop-img-machine' />
         </div>
-        <div className='acf-workshop-block'>
+        <div className='acf-workshop-block acf-workshop-block-bis'>
             <h2 className='acf-workshop-title-blk2'>Bienvenus à l'atelier artisanal de maroquinerie des Fuchats à Bussières (Saône et Loire)</h2>
             <div className='acf-workshop-images'>
                 <img src={home} alt="maison fushiats" className='acf-workshop-images-single' />
@@ -25,7 +25,7 @@ function Workshop(){
                 <h3>Un village de Bourgogne en Saône et Loire, à 10 kms à l'ouest de Macon.</h3>
             </div>
         </div>
-        <div className='acf-workshop-block'>
+        <div className='acf-workshop-block '>
             <h2 className='acf-workshop-title-blk2'>Michèle Foucher et son atelier de travail du cuir</h2>
             <div className='acf-workshop-images'>
                 <img src={michele} alt="maison fushiats" className='acf-workshop-images-single' />
@@ -37,7 +37,7 @@ function Workshop(){
                 
             </div>
         </div>
-        <div className='acf-workshop-block'>
+        <div className='acf-workshop-block acf-workshop-block-bis'>
             <h2 className='acf-workshop-title-blk2'>Les Articles</h2>
             <div className='acf-workshop-images'>
                 <img src={sacMarron} alt="maison fushiats" className='acf-workshop-images-single' />
@@ -47,7 +47,7 @@ function Workshop(){
         
                 <h3>Une grande variété d'articles : sacs, ceintures, sacoches, porte-monnaie, cartables, ronds de serviette, bracelets ...</h3>
                 <h3>Et bien entendu, possibilité de réalisation sur commande d'après un schéma, une photo ou tout autre modèle.</h3>
-                <h3> 📦 Commande à distance et expédition possible. 📦 </h3>
+                <h3> 📦 Commande à distance et expédition possible 📦 </h3>
             </div>
         </div>
         
