@@ -58,7 +58,7 @@ function ItemModal({name, price, fullName, comment, setModaleItemOpen, allCover}
             
             <span className="acf-item-price">{price}€</span>
             <img src="https://img.icons8.com/ios/50/000000/expand--v1.png" 
-                className= "acf-item-modal-zoom" 
+                className= {checkZoomClassName("acf-item-modal-zoomico acf-item-modal-zoomico-zoom", "acf-item-modal-zoomico")}
                 alt = "zoom"
                 onClick = {() => setZoomImage(true)}
                 />
@@ -72,7 +72,8 @@ function ItemModal({name, price, fullName, comment, setModaleItemOpen, allCover}
                     />
                 <img src={coverArray[coverSelect]}  
                     alt={`${name} cover`} 
-                    className = "acf-item-modal-img" 
+                    className = {checkZoomClassName("acf-item-modal-img acf-item-modal-img-zoom", "acf-item-modal-img")}
+                    
                 />             
                 <img src={checkZoomClassName("https://img.icons8.com/flat-round/64/000000/right--v1.png","https://img.icons8.com/ios/50/000000/circled-chevron-right.png" )}
                     alt= "fleche droite" 
