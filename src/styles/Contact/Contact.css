@@ -3,7 +3,6 @@
     background-color: rgb(250, 235, 215);
     padding: 50px;
     display: flex;
-    justify-content: space-around;
     border-bottom: 2px solid rgba(0, 0, 0, 0.5);
     padding-bottom: 0;
 }
@@ -33,17 +32,16 @@
   }
 .acf-contact-pagedown{
     display: flex;
-    justify-content: space-around;
     background-color: rgba(250, 235, 215, 0.7);
-    padding: 50px;
+}
+.acf-contact-form{
+   margin: auto;
 }
 .acf-contact-form-img{
   margin: auto;
   text-align: center;
-  
 }
 .acf-contact-form-img img{
-   
     width: 300px;
 }
 
