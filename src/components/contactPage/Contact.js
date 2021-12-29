@@ -1,7 +1,6 @@
 import '../../styles/Contact/Contact.css'
 import icoSac from '../../assets/sacCarreMarron/sac-cuir-artisanal-rectangle-marron.jpeg'
-import { useState } from 'react';
-
+import michele from '../../assets/workshop/Michele-Foucher-Atelier-cuir-fuchats.jpeg'
 
 
 function Contact(){
@@ -39,61 +38,66 @@ function Contact(){
        
        
         </div>
+        <div className='acf-contact-pagedown'>
+            <div className='acf-contact-form'>
+                <h2 className='acf-contact-form-title'>📭 Contactez-moi! 📭</h2>
+                <form action="" method="POST">
+                    <fieldset>
+                        <legend>Vos Coordonnées</legend>
+                        <p>
+                            <label for = "Nom">Nom :</label>
+                            <input  type="text" 
+                                    name="Nom" 
+                                    id="nom" 
+                                    size="50" 
+                                    placeholder="ex: Holmes"
+                                    required /></p>
 
-        <div className='acf-contact-form'>
-        <h2 className='acf-contact-form-title'>📭 Contactez-moi! 📭</h2>
-            <form action="" method="POST">
-                <fieldset>
-                    <legend>Vos Coordonnées</legend>
-                    <p>
-                        <label for = "Nom">Nom :</label>
-                        <input  type="text" 
-                                name="Nom" 
-                                id="nom" 
-                                size="50" 
-                                placeholder="ex: Holmes"
-                                required /></p>
+                        <p>
+                            <label for = "Prenom">Prénom :</label>
+                            <input  type="text" 
+                                    name="Prenom" 
+                                    id="prenom" 
+                                    size="50" 
+                                    placeholder="ex: Sherlock"
+                                    
+                                    required /></p>
+                        <p>
+                            <label for = "Prenom">Adresse :</label>
+                            <input  type="text" 
+                                    name="Prenom" 
+                                    id="prenom" 
+                                    size="50" 
+                                    placeholder="ex: 221B Baker St, London NW1 6XE, Royaume-Uni "
+                                    
+                                    required /></p>
 
-                    <p>
-                        <label for = "Prenom">Prénom :</label>
-                        <input  type="text" 
-                                name="Prenom" 
-                                id="prenom" 
-                                size="50" 
-                                placeholder="ex: Sherlock"
-                                
-                                required /></p>
-                    <p>
-                        <label for = "Prenom">Adresse :</label>
-                        <input  type="text" 
-                                name="Prenom" 
-                                id="prenom" 
-                                size="50" 
-                                placeholder="ex: 221B Baker St, London NW1 6XE, Royaume-Uni "
-                                
-                                required /></p>
+                        <p>
+                            <label for = "Mail">Mail :</label>
+                            <input  type="email" 
+                                    name="Mail" 
+                                    id="mail" 
+                                    size="50" 
+                                    placeholder="ex: sherlock@holmes.net" 
+                                    
+                                    required /></p>
+                    
+                    </fieldset>
 
-                    <p>
-                        <label for = "Mail">Mail :</label>
-                        <input  type="email" 
-                                name="Mail" 
-                                id="mail" 
-                                size="50" 
-                                placeholder="ex: sherlock@holmes.net" 
-                                
-                                required /></p>
-                
-                </fieldset>
+                    <fieldset>
+                        <legend>Votre Méssage</legend>
+                        <textarea name="message" id="message" required></textarea>
 
-		        <fieldset>
-			        <legend>Votre Méssage</legend>
-			        <textarea name="message" id="message" required></textarea>
+                    </fieldset>
 
-		        </fieldset>
+                    <p><input type="submit" name="submit" value="Envoyer" /></p>
 
-		        <p><input type="submit" name="submit" value="Envoyer" /></p>
-
-            </form>
+                </form>
+            </div>
+            <div className='acf-contact-form-img'>
+                <img src={michele} alt="Michèle Foucher"  />
+            </div>
+            
         </div>
     </main>
 }
