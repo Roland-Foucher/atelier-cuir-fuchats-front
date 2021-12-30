@@ -33,6 +33,7 @@
 .acf-contact-pagedown{
     display: flex;
     background-color: rgba(250, 235, 215, 0.7);
+    padding: 50px;
 }
 .acf-contact-form{
    margin: auto;
@@ -51,7 +52,7 @@ fieldset{
     width: 100%;
 }
 textarea{
-	width: 500px;
+	width: 496px;
 	height: 200px;
 }
 label{

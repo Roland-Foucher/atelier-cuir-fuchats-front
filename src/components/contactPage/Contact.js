@@ -59,8 +59,7 @@ function Contact(){
                                     name="Prenom" 
                                     id="prenom" 
                                     size="50" 
-                                    placeholder="ex: Sherlock"
-                                    
+                                    placeholder="ex: Sherlock"                                   
                                     required /></p>
                         <p>
                             <label for = "Prenom">Adresse :</label>
@@ -68,8 +67,7 @@ function Contact(){
                                     name="Prenom" 
                                     id="prenom" 
                                     size="50" 
-                                    placeholder="ex: 221B Baker St, London NW1 6XE, Royaume-Uni "
-                                    
+                                    placeholder="ex: 221B Baker St, London NW1 6XE, Royaume-Uni "                                   
                                     required /></p>
 
                         <p>
@@ -79,14 +77,22 @@ function Contact(){
                                     id="mail" 
                                     size="50" 
                                     placeholder="ex: sherlock@holmes.net" 
-                                    
                                     required /></p>
                     
                     </fieldset>
 
                     <fieldset>
-                        <legend>Votre Méssage</legend>
-                        <textarea name="message" id="message" required></textarea>
+                        <legend>Votre Message</legend>
+                        <p>
+                            
+                            <input  type="text" 
+                                    name="object" 
+                                    id="object" 
+                                    size="60"
+                                    placeholder="Objet du message"                                   
+                                    required /></p>
+
+                        <textarea name="message" id="message" placeholder="Inscrivez ici votre demande" required></textarea>
 
                     </fieldset>
 
