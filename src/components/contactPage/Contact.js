@@ -32,6 +32,11 @@ function Contact(){
             <div className='acf-contact-ico'>
                 <img src={icoSac} alt="icone sac a main" />
             </div>
+            <h4>Les amis de la région ✨</h4>
+            <p>Boutique associative La Crémaillère à St Gengoux le National :<br /> 
+            <a href="www.boutiquelacremaillere.fr"><u>www.boutiquelacremaillere.fr</u></a></p>
+            <p>Les Mères Noël et Belles de Mai :<br />
+            <a href="www.meresnoel-bellesdemai.com"><u>www.meresnoel-bellesdemai.com</u></a></p>
             
 
         </article>
