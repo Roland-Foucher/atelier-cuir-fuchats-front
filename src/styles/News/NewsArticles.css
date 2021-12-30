@@ -17,6 +17,22 @@
     text-decoration: underline;
 }
 .acf-news-article-img{
-    width: 300px;
+    width: 90%;
     padding-left: 50px;
+}
+
+/*MEDIA QUERIES*/
+
+@media screen and (max-width: 640px){
+    .acf-news-article{
+        flex-direction: column;
+        text-align: center;
+        
+    }
+    .acf-news-artilcle-comment{
+        text-align: justify;
+    }
+    .acf-news-article-img{
+        padding-left: 0;
+    }
 }
