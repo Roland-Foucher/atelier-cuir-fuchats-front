@@ -1,0 +1,22 @@
+.acf-news-article{
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    padding: 50px;
+    width: 60%;
+    margin: auto;
+    margin-bottom: 20px;
+    display: flex;
+    background-color: rgba(215, 202, 160, 0.5);
+    border-radius: 20px;
+}
+.acf-news-article-title{
+    padding-bottom: 20px;
+    border-bottom: 1px solid black;
+}
+.acf-news-article-title strong{
+    color: red;
+    text-decoration: underline;
+}
+.acf-news-article-img{
+    width: 300px;
+    padding-left: 50px;
+}
