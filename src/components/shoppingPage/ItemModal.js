@@ -43,9 +43,9 @@ function ItemModal({name, price, fullName, comment, setModaleItemOpen, allCover}
 
     const checkZoomClassName = (zoomClass, normalClass) => zoomImage  ? zoomClass : normalClass 
     
-
-
+    // definition de methode clickoutside
     ItemModal.handleClickOutside = () => setModaleItemOpen(false)
+    
     return (
     <article className={checkZoomClassName("acf-item-modal acf-item-modal-zoom", "acf-item-modal")} >
         

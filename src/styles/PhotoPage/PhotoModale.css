@@ -1,0 +1,47 @@
+
+.acf-photoModale{
+    display: flex;
+    position: fixed;
+    left: 15%;
+    top: 2%;
+}
+.acf-photoModale-blockCover{
+    height: 640px;
+    width: 640px;
+    
+}
+.acf-photoModale-cover{
+    max-height: 100%;
+    max-width: 100%;
+    display: block;
+    margin: auto;
+   
+    
+}
+.acf-photoModale-arrow{
+  
+    margin: auto;
+    width: 5%;
+  
+}
+
+/*MEDIA QUERIES*/
+@media screen and (max-width: 970px){
+    .acf-photoModale{
+        left: 0%;
+    }
+}
+@media screen and (max-width: 768px){
+    .acf-photoModale-blockCover{
+        height: 100%;
+        width: 100%;
+        padding: 10px;
+        
+    }
+}
+@media screen and (max-width: 440px){
+    .acf-photoModale{
+        display: none;
+        padding-left: 0;
+    }
+}
