@@ -1,55 +1,48 @@
-
-.acf-item{
-    margin: 20px;
-	display: flex;
-	flex-direction: column;
-	position: relative;
-    background-color:antiquewhite;
-    padding: 40px;
-    border-radius: 20px;
-    
+.acf-item {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: antiquewhite;
+  padding: 40px;
+  border-radius: 20px;
 }
-.acf-item-img{
-    width: 200px;
-    height: 200px;
-    border-radius: 20px;
-    align-self: center;
-    
+.acf-item-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  align-self: center;
 }
 
-.acf-item-img-animation{
-    animation-name: deZoom;
-    transition: transform ease-in-out 0.3s;
-    cursor: pointer;
+.acf-item-img-animation {
+  animation-name: deZoom;
+  transition: transform ease-in-out 0.3s;
+  cursor: pointer;
+}
+.acf-item-img-animation:hover {
+  transform: scale(1.1);
+}
 
+.acf-item-price {
+  background-color: rgba(215, 202, 160, 0.9);
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  padding: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: smaller;
 }
-.acf-item-img-animation:hover{
-    transform: scale(1.1);
+.acf-item-name {
+  text-align: center;
+  font-variant: small-caps;
 }
-
-.acf-item-price{
-    background-color: rgba(215, 202, 160, 0.9);
-    border-top-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-    padding: 15px;
-    position: absolute;
-    top : 0;
-    left: 0;
-    
-}
-.acf-item-name{
-    text-align: center;
-    text-transform: uppercase;
-    
-}
-.acf-item-addButton{
-    width: 40%;
-    margin: auto;
-    border-radius: 2rem;
-    cursor: pointer;
+.acf-item-addButton {
+  width: 40%;
+  margin: auto;
+  border-radius: 2rem;
+  cursor: pointer;
 }
 .acf-item-addButton:active {
-    background-color: rgba(215, 202, 160, 0.9);
+  background-color: rgba(215, 202, 160, 0.9);
 }
-
-

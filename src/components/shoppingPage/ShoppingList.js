@@ -4,33 +4,32 @@ import ItemList from './ItemList';
 import { useState } from 'react'
 import { itemToSale } from '../../datas/itemToSale';
 
-// generate array categorie et state activeCategory
+// main function of shopping page
+function ShoppingList() {
 
-function ShoppingList(){
+    // useState for the actve category filter
     const [activeCategory, setActiveCategory] = useState('')
-    
+
+    // make an array with categories not duplicate
     var categories = [];
-    itemToSale.forEach((el) =>{
-        if ((!categories.includes(el.category))){
+    itemToSale.forEach((el) => {
+        if ((!categories.includes(el.category))) {
             categories.push(el.category)
         }
     })
 
-
-    return(
+    return (
         <main className="ShoppingList">
             <Aside
-            activeCategory = {activeCategory}
-            setActiveCategory = {setActiveCategory}
-            categories = {categories}
-            >
+                activeCategory={activeCategory}
+                setActiveCategory={setActiveCategory}
+                categories={categories}
+            />
 
-            </Aside>
             <ItemList
-            activeCategory = {activeCategory}
-            >
+                activeCategory={activeCategory}
+            />
 
-            </ItemList>
         </main>
     )
 }

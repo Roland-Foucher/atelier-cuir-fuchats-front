@@ -1,34 +1,36 @@
-.acf-header{
-background-color: #D7CAA0;
-color : #993300;
-display: flex;
-justify-content: flex-end;
+.acf-header {
+  background-color: #d7caa0;
+  color: #993300;
+  display: flex;
+  justify-content: flex-end;
+  font-style: italic;
+  font-size: larger;
 }
-.acf-logo{
-    height: 44px;
-    margin-bottom: auto;
-    margin-top: auto;
+.acf-logo {
+  height: 44px;
+  margin-bottom: auto;
+  margin-top: auto;
 }
-.acf-titre{
-    padding: 2rem;
-    margin-right: 100px;
+.acf-titre {
+  padding: 2rem;
+  margin-right: 100px;
 }
-.acf-burger{
-    display: none;
+.acf-burger {
+  display: none;
 }
 
 /*MEDIA QUERIES*/
-@media screen and (max-width: 440px){
-    .acf-header{
-        padding-left: 2em ;
-    }
-    .acf-titre{
-        margin-right: 0;
-    }
-    .acf-burger{
-        display: flex;
-        width: 40px;
-        margin-top: auto;
-        cursor: pointer;
-    }
+@media screen and (max-width: 440px) {
+  .acf-header {
+    padding-left: 2em;
+  }
+  .acf-titre {
+    margin-right: 0;
+  }
+  .acf-burger {
+    display: flex;
+    width: 40px;
+    margin-top: auto;
+    cursor: pointer;
+  }
 }

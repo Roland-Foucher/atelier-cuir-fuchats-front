@@ -1,12 +1,10 @@
-.ShoppingList{
-    display: flex;
-    
+.ShoppingList {
+  display: flex;
 }
 
 /*MEDIA QUERIES*/
-@media screen and (max-width: 440px){
-    .ShoppingList{
-        display: block;
-    }
+@media screen and (max-width: 440px) {
+  .ShoppingList {
+    display: block;
+  }
 }
-    

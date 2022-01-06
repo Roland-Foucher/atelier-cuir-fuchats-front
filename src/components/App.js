@@ -11,39 +11,37 @@ import News from './newsPage/News';
 import UseConditions from './useConditionsPage/UseConditions';
 import NotFound from './NotFound';
 
-import '../styles/App.css' 
+import '../styles/App.css'
 import { useState } from 'react';
 import Admin from './adminPage/Admin';
 
-
-
-// fonction App utilise Route de react
-//
-
 function App() {
+
+  // usestate to display the menu or not with smartphone responsive 
   const [showMenu, setShowMenu] = useState(false);
 
   return (
-    <div>
-      
+    <div className='allWebSite'>
       <Banner
-        showMenu = {showMenu}
-        setShowMenu = {setShowMenu}
+        showMenu={showMenu}
+        setShowMenu={setShowMenu}
       />
       <Nav
         showMenu={showMenu}
       />
-        <Routes>
-          <Route exact path="/" element={<ShoppingList />} />
-          <Route exact path="/workshop" element={<Workshop />} />
-          <Route exact path="/photo" element={<Photo />} />
-          <Route exact path="/news" element={<News />} />
-          <Route exact path="/contact" element={<Contact />} />
-          <Route exact path="/mention-legal" element={<UseConditions />} />
-          <Route exact path="/admin" element={<Admin />} />
-          <Route path= "*" element={<NotFound />} />
-        </Routes>
-        <Footer />
+      <Routes>
+        <Route exact path="/" element={<ShoppingList />} />
+        <Route exact path="/workshop" element={<Workshop />} />
+        <Route exact path="/photo" element={<Photo />} />
+        <Route exact path="/news" element={<News />} />
+        <Route exact path="/contact" element={<Contact />} />
+        <Route exact path="/mention-legal" element={<UseConditions />} />
+        <Route exact path="/admin" element={<Admin />} />
+
+        {/* page not found  */}
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+      <Footer />
     </div>
   );
 }

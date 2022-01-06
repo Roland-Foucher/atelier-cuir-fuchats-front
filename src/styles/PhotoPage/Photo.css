@@ -1,11 +1,11 @@
-.acf-photo-list{
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 0;
+.acf-photo-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 0;
 }
-.acf-photo-unit{
-    width: 300px;
-    padding: 10px;
+.acf-photo-unit {
+  width: 300px;
+  padding: 10px;
 }

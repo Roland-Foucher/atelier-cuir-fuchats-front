@@ -1,19 +1,19 @@
-.acf-news-page{
-    background-color: antiquewhite;
-    padding-top: 30px;
-    padding-bottom: 30px;
+.acf-news-page {
+  background-color: antiquewhite;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
-.acf-news-title{
-    padding: 50px;
-    color: #993300;
-    text-align: center;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.5);
-    border-top: 2px solid rgba(0, 0, 0, 0.5);
-    background-color: rgba(215, 202, 160, 0.5);
-    
-    
+
+.acf-news-title {
+  padding: 50px;
+  color: #993300;
+  text-align: center;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+  border-top: 2px solid rgba(0, 0, 0, 0.5);
+  background-color: rgba(215, 202, 160, 0.5);
 }
-.acf-news-newsList{
-    list-style: none;
-    padding: 0;
+
+.acf-news-newsList {
+  list-style: none;
+  padding: 0;
 }

@@ -1,78 +1,78 @@
-.acf-workshop-page{
-    text-align: center;
-    background-color: rgba(215, 202, 160, 0.5);
-    
-  
+.acf-workshop-page {
+  text-align: center;
+  background-color: rgba(215, 202, 160, 0.5);
 }
-.acf-workshop-block{
-    background-color: rgba(215, 202, 160, 0.4);
-    padding: 50px;
-    
-    border-bottom: 2px solid rgba(0, 0, 0, 0.5);
-
-}
-.acf-workshop-block-bis{
-    background-color: rgba(250, 235, 215, 0.3);  
-}
-.acf-workshop-head{
-    text-align: left;
-    color : #993300;
-    display: flex;
-    justify-content: space-around;
-    padding-top: 75px;
-    padding-bottom: 75px;
-   
-}
-.acf-workshop-title-main{
-    margin-top: auto;
-    margin-bottom: auto;
+.acf-workshop-page p {
+  font-size: larger;
 }
 
-.acf-workshop-img-machine{
-    width: 20%;
+.acf-workshop-block {
+  background-color: rgba(215, 202, 160, 0.4);
+  padding: 50px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.5);
 }
 
-.acf-workshop-title-blk2{
-    padding-bottom: 40px;
-    
-}
-.acf-workshop-images{
-    display: flex;
-    justify-content: space-around;
+.acf-workshop-block-bis {
+  background-color: rgba(250, 235, 215, 0.3);
 }
 
-.acf-workshop-images-single{
-    padding: 10px;
-    width: 20%;
-    height: 20%;
-    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
-    border-radius: 20px;
+.acf-workshop-head {
+  text-align: left;
+  color: #993300;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 75px;
+  padding-bottom: 75px;
 }
-.acf-workshop-descritption{
-    padding-top: 40px;
+
+.acf-workshop-title-main {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.acf-workshop-img-machine {
+  width: 20%;
+}
+
+.acf-workshop-title-blk2 {
+  padding-bottom: 40px;
+}
+.acf-workshop-images {
+  display: flex;
+  justify-content: space-around;
+}
+
+.acf-workshop-images-single {
+  padding: 10px;
+  width: 20%;
+  height: 20%;
+  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+}
+.acf-workshop-descritption {
+  padding-top: 40px;
 }
 
 /*MEDIA QUERIES*/
-@media screen and (max-width: 440px){
-    .acf-workshop-title-main{
-      text-align: center;
-      padding-bottom: 30px;
-    }
-    .acf-workshop-head{
-        flex-direction: column;
-       
-    }
-    .acf-workshop-img-machine{
-        width: 70%;
-        margin: auto;
-    }
-    .acf-workshop-images{
-        display: flex;
-        flex-direction: column;
-    }
-    .acf-workshop-images-single{
-        width: auto;
-        height: auto;
-        margin: 10px;
-    }
+@media screen and (max-width: 440px) {
+  .acf-workshop-title-main {
+    text-align: center;
+    padding-bottom: 30px;
+  }
+  .acf-workshop-head {
+    flex-direction: column;
+  }
+  .acf-workshop-img-machine {
+    width: 70%;
+    margin: auto;
+  }
+  .acf-workshop-images {
+    display: flex;
+    flex-direction: column;
+  }
+  .acf-workshop-images-single {
+    width: auto;
+    height: auto;
+    margin: 10px;
+  }
 }

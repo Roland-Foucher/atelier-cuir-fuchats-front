@@ -1,30 +1,29 @@
 import logo from '../assets/logo/sac_michele_icone.jpeg'
 import burger from '../assets/logo/burger.png'
 import '../styles/Banner.css'
-import { useState } from 'react'
 
-function Banner({showMenu, setShowMenu}){
+function Banner({ showMenu, setShowMenu }) {
 
-    
-    function toggleMenu(){
-        if (showMenu === true){
+    // toggle menu burger on/off on smartphone
+    function toggleMenu() {
+        if (showMenu === true) {
             setShowMenu(false);
-        }else{
+        } else {
             setShowMenu(true);
         }
     }
 
-    return( 
+    return (
         <header className="acf-header">
-            <img src={logo} alt="icone sac cuir" className = 'acf-logo'/>
-            <h1 className = 'acf-titre'>Atelier Cuir Les Fuchats</h1>
-            <img src={burger} 
-                alt="menu" 
-                className='acf-burger' 
+            <img src={logo} alt="icone sac cuir" className='acf-logo' />
+            <h1 className='acf-titre'>Atelier Cuir Les Fuchats</h1>
+            <img src={burger}
+                alt="menu"
+                className='acf-burger'
                 onClick={toggleMenu}
-                />
+            />
         </header>
     )
-    
+
 }
 export default Banner;
