@@ -1,8 +1,10 @@
+import swal from 'sweetalert'
+
 import '../../styles/ShoppingPageStyle/Item.css'
 
 // config of an item to display.
 
-function Item({ cover, name, price, id, setActiveModaleItem, setModaleItemOpen, modaleItemOpen }) {
+function Item({ cover, name, price, id, setActiveModaleItem, setModaleItemOpen, modaleItemOpen, cart, updateCart }) {
 
     // open modal on click with the id of the cover clicked
     function modalConfiguration(idChoosen) {
@@ -14,7 +16,18 @@ function Item({ cover, name, price, id, setActiveModaleItem, setModaleItemOpen, 
     function disableCoverAnimation() {
         return modaleItemOpen ? "acf-item-img" : "acf-item-img acf-item-img-animation"
     }
-
+    
+    //add item to cart
+    function addItemToCart(name,price){
+        const currentItemAdd = cart.find((item) => item.name === name);
+        if(currentItemAdd){
+            const otherItem = cart.filter((item) =>item.name !== name);
+            updateCart([...otherItem, {name, price, amount: currentItemAdd.amount + 1}]);
+        }else{
+            updateCart([...cart, {name,price, amount: 1}]);
+        }
+        swal("l'article à été ajouté au panier !","", "success");;
+    }
 
     return (
         <li className="acf-item">
@@ -25,7 +38,7 @@ function Item({ cover, name, price, id, setActiveModaleItem, setModaleItemOpen, 
                 className={disableCoverAnimation()}
                 onClick={() => modalConfiguration(id)} />
             <p className="acf-item-name">{name}</p>
-            <button className="acf-item-addButton">ajouter</button>
+            <button className="acf-item-addButton" onClick={() => addItemToCart(name,price)}>ajouter</button>
         </li>
     )
 }

@@ -9,13 +9,14 @@ import ItemModal from './ItemModal';
 // filter item by category (or not if activeCategory is null)
 // modal is in the same div and same map than item 
 
-function ItemList({ activeCategory }) {
+function ItemList({ activeCategory, cart, updateCart }) {
     // choose the item to show in modal
     const [activeModaleItem, setActiveModaleItem] = useState('')
 
     // switch modal open or close
     const [modaleItemOpen, setModaleItemOpen] = useState(false)
-
+    
+    
     return (
         <section className="acf-shopping-item">
             <ul className="acf-item-list">
@@ -31,6 +32,9 @@ function ItemList({ activeCategory }) {
                                 setActiveModaleItem={setActiveModaleItem}
                                 setModaleItemOpen={setModaleItemOpen}
                                 modaleItemOpen={modaleItemOpen}
+                                cart = {cart}
+                                updateCart = {updateCart}
+
 
                             />
 
