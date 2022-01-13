@@ -5,11 +5,12 @@ import { useState } from 'react'
 import { itemToSale } from '../../datas/itemToSale';
 
 // main function of shopping page
-function ShoppingList() {
-
+function ShoppingList({ cart, updateCart }) {
+    
     // useState for the actve category filter
     const [activeCategory, setActiveCategory] = useState('')
-
+    
+    
     // make an array with categories not duplicate
     var categories = [];
     itemToSale.forEach((el) => {
@@ -28,6 +29,8 @@ function ShoppingList() {
 
             <ItemList
                 activeCategory={activeCategory}
+                cart = {cart}
+                updateCart = {updateCart}
             />
 
         </main>

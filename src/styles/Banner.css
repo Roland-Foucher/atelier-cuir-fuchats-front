@@ -1,10 +1,12 @@
 .acf-header {
   background-color: #d7caa0;
-  color: #993300;
+}
+.acf-header-full-title {
   display: flex;
   justify-content: flex-end;
   font-style: italic;
   font-size: larger;
+  color: #993300;
 }
 .acf-logo {
   height: 44px;
@@ -18,19 +20,54 @@
 .acf-burger {
   display: none;
 }
+.acf-header-cart {
+  width: 40px;
+  position: absolute;
+  right: 40px;
+  top: 100px;
+}
+.acf-header-cart-count {
+  background: #993300;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+
+  position: absolute;
+  right: 0px;
+  top: 30px;
+}
 
 /*MEDIA QUERIES*/
 @media screen and (max-width: 440px) {
-  .acf-header {
+  .acf-logo {
     padding-left: 2em;
   }
   .acf-titre {
     margin-right: 0;
+    font-size: x-large;
+    padding: 1rem;
+    padding-inline: 2rem;
+  }
+  .acf-header-logos {
+    display: flex;
+    justify-content: space-between;
   }
   .acf-burger {
-    display: flex;
+    display: block;
     width: 40px;
     margin-top: auto;
+    padding-left: 20px;
+    padding-bottom: 10px;
+
     cursor: pointer;
+  }
+  .acf-header-cart {
+    display: block;
+    position: relative;
+    top: 0px;
+    right: 10px;
+    /* padding-right: 20px;
+    padding-bottom: 10px; */
   }
 }

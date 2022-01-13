@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router";
 
+
 import '../styles/Nav.css'
 
 // On doit utiliser useLocation avec le router de react car l'url ne cahnge pas pour le navigateur
@@ -28,8 +29,14 @@ function Nav({ showMenu }) {
                 <li className={changeNavStyle("/news")}><Link to="news">Actualité</Link></li>
                 <li className={changeNavStyle("/photo")}><Link to="photo">Galerie photo</Link></li>
                 <li className={changeNavStyle("/contact")}><Link to="contact">Contact</Link></li>
+                
             </ul>
+            
+            
+            
+
         </nav>
+
     )
 }
 
