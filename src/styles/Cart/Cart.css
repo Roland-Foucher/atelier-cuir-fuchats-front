@@ -1,0 +1,24 @@
+.acf-cart-table{
+    border-collapse: collapse;
+    margin: 20px;
+    text-align: center;
+}
+.acf-cart-table-cel{
+    border: 1px solid black;
+    padding: 5px;
+    width: 25%;
+
+}
+.acf-cart-table-itemName{
+    border-top: 1px solid black;
+    padding-top: 10px;
+    font-size: small;
+}
+.acf-cart-table-cover{
+    width: 75px;
+    padding-bottom: 5px;    
+}
+.acf-cart-table-totalPrice{
+    padding-block: 25px;
+}
+
