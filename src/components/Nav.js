@@ -26,7 +26,7 @@ function Nav({ showMenu }) {
             <ul className="acf-navlist">
                 <li className={changeNavStyle("/")}><Link to="/">La Boutique</Link></li>
                 <li className={changeNavStyle("/workshop")}><Link to="workshop">L'Atelier</Link></li>
-                <li className={changeNavStyle("/news")}><Link to="news">Actualité</Link></li>
+                <li className={changeNavStyle("/news")}><Link to="news">Actualités</Link></li>
                 <li className={changeNavStyle("/photo")}><Link to="photo">Galerie photo</Link></li>
                 <li className={changeNavStyle("/contact")}><Link to="contact">Contact</Link></li>
                 

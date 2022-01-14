@@ -7,7 +7,7 @@ function Footer() {
     return (
         <footer className="acf-footer">
             <ul className="acf-footer-list">
-                <li className="acf-footer-list-item"><Link to="mention-legal">Mention Legal</Link></li>
+                <li className="acf-footer-list-item"><Link to="mention-legal">Mentions Légales</Link></li>
                 <li className="acf-footer-list-item"> <Link to="contact">Contacts</Link></li>
             </ul>
             <ul className="acf-footer-list acf-footer-admin">

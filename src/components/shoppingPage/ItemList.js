@@ -4,6 +4,7 @@ import Item from './Item';
 
 import { itemToSale } from '../../datas/itemToSale';
 import ItemModal from './ItemModal';
+import swal from 'sweetalert'
 
 // display list of items to sale.
 // filter item by category (or not if activeCategory is null)
@@ -16,11 +17,20 @@ function ItemList({ activeCategory, cart, updateCart }) {
     // switch modal open or close
     const [modaleItemOpen, setModaleItemOpen] = useState(false)
     
-    
+    function addItemToCart(name,price,cover){
+        const currentItemAdd = cart.find((item) => item.name === name);
+        if(currentItemAdd){
+            const otherItem = cart.filter((item) =>item.name !== name);
+            updateCart([...otherItem, {name, price, cover, amount: currentItemAdd.amount + 1}]);
+        }else{
+            updateCart([...cart, {name, price, cover, amount: 1}]);
+        }
+        swal("l'article à été ajouté au panier !","", "success");;
+    }
     return (
         <section className="acf-shopping-item">
             <ul className="acf-item-list">
-                {itemToSale.map(({ name, cover, id, price, category, fullName, comment, allCover }) =>
+                {itemToSale.map(({ name, cover, id, price, category, fullName, comment, allCover, quantity }) =>
 
                     !activeCategory || activeCategory === category ? (
                         <div key={id}>
@@ -32,8 +42,7 @@ function ItemList({ activeCategory, cart, updateCart }) {
                                 setActiveModaleItem={setActiveModaleItem}
                                 setModaleItemOpen={setModaleItemOpen}
                                 modaleItemOpen={modaleItemOpen}
-                                cart = {cart}
-                                updateCart = {updateCart}
+                                addItemToCart = {addItemToCart}
 
 
                             />
@@ -49,6 +58,8 @@ function ItemList({ activeCategory, cart, updateCart }) {
                                         comment={comment}
                                         allCover={allCover}
                                         setModaleItemOpen={setModaleItemOpen}
+                                        addItemToCart = {addItemToCart}
+
                                     />
                                 )
                             )}

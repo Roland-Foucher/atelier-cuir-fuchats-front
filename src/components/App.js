@@ -47,7 +47,7 @@ function App() {
       />
       <Routes>
         <Route exact path="/" element={<ShoppingList cart={cart} updateCart={updateCart} />} />
-        <Route exact path="/cart" element={<Cart />} />
+        <Route exact path="/cart" element={<Cart cart={cart} updateCart={updateCart} />} />
         <Route exact path="/workshop" element={<Workshop />} />
         <Route exact path="/photo" element={<Photo />} />
         <Route exact path="/news" element={<News />} />
