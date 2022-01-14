@@ -7,7 +7,7 @@ import { useState } from 'react';
 // can zoom on the cover on click 
 // comment and covers are in arrays in data 
 
-function ItemModal({ name, price, fullName, comment, setModaleItemOpen, allCover }) {
+function ItemModal({ name, price, fullName, comment, setModaleItemOpen, allCover, addItemToCart }) {
 
     // switch the covers on click left or right array
     const [coverSelect, setCoverSelect] = useState(0);
@@ -35,6 +35,7 @@ function ItemModal({ name, price, fullName, comment, setModaleItemOpen, allCover
         }
         setCoverSelect(navCover);
     }
+
     // switch style type to zoom cover selected
     const defineStyleOnZoom = (styleClass) => {
 
@@ -101,7 +102,7 @@ function ItemModal({ name, price, fullName, comment, setModaleItemOpen, allCover
 
                 {/* item name + add button  */}
                 <p className="acf-item-name">{name}</p>
-                <button className="acf-item-addButton" >ajouter</button>
+                <button className="acf-item-addButton" onClick={() => addItemToCart(name,price,coverArray[0])}>ajouter</button>
 
             </div>
 
