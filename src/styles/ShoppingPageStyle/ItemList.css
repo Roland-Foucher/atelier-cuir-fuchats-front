@@ -1,7 +1,11 @@
+.acf-shopping-item{
+  flex: 2;
+}
 .acf-item-list {
-  list-style-type: none;
   padding: 32px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content:center;
+  align-items: center;
+  
 }
