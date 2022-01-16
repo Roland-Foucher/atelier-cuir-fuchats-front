@@ -1,8 +1,13 @@
+
+.acf-cart-content{
+    display: flex;
+}
 .acf-cart-table{
     border-collapse: collapse;
     margin: 20px;
     text-align: center;
-    margin-left: 20%;
+    margin-left: 10%;
+    width: 100%;
 }
 .acf-cart-table-cel{
     border: 1px solid rgba(0, 0, 0, 0.2);
@@ -32,5 +37,32 @@
     bottom: 20px;
     width: 20px;
     cursor:pointer;
+}
+.acf-cart-cb{
+
+    border: 0.5px solid black;
+    font-size: small;
+    text-align: justify;
+    padding: 10px;
+    margin: 10px;
+    position: relative;
+    
+}
+.acf-cart-validate-button{
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    background-color: #993300;
+    cursor: pointer;
+    transition-duration: 0.4s;
+  
+}
+.acf-cart-validate-button:hover{
+    background-color:#742701;
+}
+.acf-cart-validate-button:active{
+ 
+    transform: translateY(4px);
 }
 
