@@ -26,7 +26,7 @@ function Cart({ cart, updateCart }) {
     const deletItem = (name) => {
         let newCart = [];
         cart.forEach((el) => {
-            if (el.name != name) {
+            if (el.name !== name) {
                 newCart.push(el);
             }
         })

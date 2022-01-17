@@ -1,5 +1,4 @@
-import { useState } from 'react';
-import { photo } from '../../datas/photos'
+import { useEffect, useState } from 'react';
 import PhotoModale from './PhotoModale';
 import '../../styles/PhotoPage/Photo.css'
 
@@ -7,14 +6,34 @@ import '../../styles/PhotoPage/Photo.css'
 // display list of photo with photo.js data
 
 function Photo() {
+
+    //connect to backend
+    const [photos, setPhotos] = useState(null);
+    const [fetchError, setFetchError] = useState(true)
+
+    useEffect(() => {
+        async function getData() {
+            const response = await fetch("http://localhost:3001/api/photos")
+            if (!response.ok) {
+                console.log(response.status, response.statusText)
+
+            }
+            else {
+                const data = await response.json()
+                setPhotos(data);
+                setFetchError(false)
+            }
+        }
+        getData();
+    }, []);
     // switch photo modal active or not
     const [activePhotoModal, setActivePhotoModal] = useState(false)
 
     // select the photo to display in the modal
     const [photoToDisplay, setPhotoToDisplay] = useState(0)
 
-    // define the number of photo
-    let maxPhoto = photo.length;
+    // define the number of photos (if not null)
+    const maxPhoto = photos ? photos.length : 0;
 
     // open modal with the id of the photo to display
     const openModal = (id) => {
@@ -25,8 +44,11 @@ function Photo() {
     return (
         <main className='acf-photo-page'>
             <ul className='acf-photo-list'>
+            {fetchError && (
+                <h1>erreur de connexion au serveur</h1>
+            )}
 
-                {photo.map(({ id, cover, name }) =>
+                {photos && photos.map(({ id, cover, name }) =>
                     <div key={id}>
                         <li>
                             <img src={cover}
