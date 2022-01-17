@@ -1,5 +1,5 @@
 import '../../styles/ShoppingPageStyle/ItemList.css'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import Item from './Item';
 import ItemModal from './ItemModal';
 import swal from 'sweetalert'
@@ -8,26 +8,8 @@ import swal from 'sweetalert'
 // filter item by category (or not if activeCategory is null)
 // modal is in the same div and same map than item 
 
-function ItemList({ activeCategory, cart, updateCart }) {
-    // get object from backend
-    const [itemToSale, setItemToSale] = useState(null);
-    const [fetchError, setFetchError] = useState(true)
-   
-    useEffect(() => {
-        async function getData() {
-            const response = await fetch("http://localhost:3001/api/shoppingList")
-            if(!response.ok){
-                console.log(response.status, response.statusText)
-                
-            }
-            else{
-                const data = await response.json()
-                setItemToSale(data);
-                setFetchError(false)
-            }
-        }
-        getData();
-    }, []);
+function ItemList({ activeCategory, cart, updateCart, fetchError, itemToSale }) {
+
 
 
     // choose the item to show in modal

@@ -34,7 +34,7 @@ function App() {
     localStorage.setItem('cart', JSON.stringify(cart))
   }, [cart])
 
-
+  const serverURL = 'http://localhost:3001/api';
   return (
     <div className='allWebSite'>
       <Banner
@@ -46,12 +46,12 @@ function App() {
         showMenu={showMenu}
       />
       <Routes>
-        <Route exact path="/" element={<ShoppingList cart={cart} updateCart={updateCart} />} />
+        <Route exact path="/" element={<ShoppingList cart={cart} updateCart={updateCart} serverURL = {serverURL} />} />
         <Route exact path="/cart" element={<Cart cart={cart} updateCart={updateCart} />} />
         <Route exact path="/workshop" element={<Workshop />} />
-        <Route exact path="/photo" element={<Photo />} />
-        <Route exact path="/news" element={<News />} />
-        <Route exact path="/contact" element={<Contact />} />
+        <Route exact path="/photo" element={<Photo serverURL = {serverURL} />} />
+        <Route exact path="/news" element={<News serverURL = {serverURL} />} />
+        <Route exact path="/contact" element={<Contact serverURL = {serverURL} />} />
         <Route exact path="/mention-legal" element={<UseConditions />} />
         <Route exact path="/admin" element={<Admin />} />
 
