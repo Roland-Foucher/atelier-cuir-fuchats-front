@@ -7,7 +7,7 @@ import { useState } from 'react'
 
 
 
-function Contact() {
+function Contact({ serverURL }) {
     const  [firstname, setFirstName] = useState('')
     const  [lastname, setLastName] = useState('')
     const  [adress, setAdress] = useState('')
@@ -35,7 +35,7 @@ function Contact() {
         };
         
         // Post data
-        fetch('http://localhost:3001/api/contact', requestOptions)
+        fetch(serverURL + '/contact', requestOptions)
             
             .then((response) => {
                 if (response.status === 201){

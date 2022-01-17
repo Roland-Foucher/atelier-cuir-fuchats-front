@@ -2,14 +2,14 @@ import NewsArticles from './NewsArticles'
 import '../../styles/News/News.css'
 import { useEffect, useState } from 'react';
 
-function News() {
+function News({serverURL}) {
     //connect to backend
     const [news, setnews] = useState(null);
     const [fetchError, setFetchError] = useState(true)
 
     useEffect(() => {
         async function getData() {
-            const response = await fetch("http://localhost:3001/api/news")
+            const response = await fetch(serverURL +  "/news")
             if (!response.ok) {
                 console.log(response.status, response.statusText)
 

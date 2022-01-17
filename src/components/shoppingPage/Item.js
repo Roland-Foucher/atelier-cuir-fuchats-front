@@ -17,17 +17,6 @@ function Item({ cover, name, price, id, setActiveModaleItem, setModaleItemOpen, 
         return modaleItemOpen ? "acf-item-img" : "acf-item-img acf-item-img-animation"
     }
     
-    //add item to cart
-    // function addItemToCart(name,price,cover){
-    //     const currentItemAdd = cart.find((item) => item.name === name);
-    //     if(currentItemAdd){
-    //         const otherItem = cart.filter((item) =>item.name !== name);
-    //         updateCart([...otherItem, {name, price, cover, amount: currentItemAdd.amount + 1}]);
-    //     }else{
-    //         updateCart([...cart, {name, price, cover, amount: 1}]);
-    //     }
-    //     swal("l'article à été ajouté au panier !","", "success");;
-    // }
 
     return (
         <li className="acf-item">

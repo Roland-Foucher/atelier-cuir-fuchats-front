@@ -5,7 +5,7 @@ import '../../styles/PhotoPage/Photo.css'
 // main function of photoPage
 // display list of photo with photo.js data
 
-function Photo() {
+function Photo({serverURL}) {
 
     //connect to backend
     const [photos, setPhotos] = useState(null);
@@ -13,7 +13,7 @@ function Photo() {
 
     useEffect(() => {
         async function getData() {
-            const response = await fetch("http://localhost:3001/api/photos")
+            const response = await fetch(serverURL + "/photos")
             if (!response.ok) {
                 console.log(response.status, response.statusText)
 
