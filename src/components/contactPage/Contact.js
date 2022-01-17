@@ -2,135 +2,198 @@ import '../../styles/Contact/Contact.css'
 import icoSac from '../../assets/sacCarreMarron/sac-cuir-artisanal-rectangle-marron.jpeg'
 import michele from '../../assets/workshop/Michele-Foucher-Atelier-cuir-fuchats.jpeg'
 
+import swal from 'sweetalert'
+import { useState } from 'react'
+
+
 
 function Contact() {
+    const  [firstname, setFirstName] = useState('')
+    const  [lastname, setLastName] = useState('')
+    const  [adress, setAdress] = useState('')
+    const  [email, setEmail] = useState('')
+    const  [title, setTitle] = useState('')
+    const  [content, setContent] = useState('')
 
-    return (
-        <main className="acf-contact-page">
+    // make data to send
+    const data = {firstname, lastname, adress, email, title, content};
 
-            {/* part up of the page */}
-            <div className='acf-contact-pageup'>
+    //post form to backend
+    const handleSubmit = (event) => {
 
-                {/* google map */}
-                <aside className="acf-contact-right">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d88959.47025468003!2d4.662871362860385!3d46.30982172079913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f37153408d0b57%3A0x52d9a1006d6603ca!2sAtelier%20cuir%20Fuchats!5e0!3m2!1sfr!2sfr!4v1640700867246!5m2!1sfr!2sfr"
-                        width="600"
-                        height="450"
-                        loading="lazy"
-                        title="map-acf"></iframe>
-                </aside>
+        // button submit to default
+        event.preventDefault();
+        
+        // take data to JSON
+        const requestOptions = {
+            method: 'POST',
+            headers: { 
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify(data)
+        };
+        
+        // Post data
+        fetch('http://localhost:3001/api/contact', requestOptions)
+            
+            .then((response) => {
+                if (response.status === 201){
+                    swal("le message a été envoyé avec succès!","", "success");
+                    console.log(response)
+                    console.log(response.json())
+                }else{
+                    console.log(response.status)
+                    swal("Un problème est survenu!","", "error"); 
+                }
+            })
+            .catch((error) => {
+                console.error(error);
+                swal("Un problème est survenu!","", "error");
+            })
 
-                {/* contact part */}
-                <article className="acf-contact-left">
+    }
+    
 
-                    {/* adress */}
-                    <div>
-                        <h2>Atelier cuir des Fuchats</h2>
-                        <p>201 chemin des Fuchats <br />
-                            71960 Bussières</p>
-                        <p>Téléphone : <br />
-                            06 25 22 64 23</p>
-                        <p className="acf-contact-siret"><em>siret : 793 412 248 00015</em></p>
+return (
+    <main className="acf-contact-page">
 
-                        <h3>L'atelier est ouvert sur demande,<br />n'hésitez pas à me contacter pour venir voir mes articles! </h3>
-                    </div>
+        {/* part up of the page */}
+        <div className='acf-contact-pageup'>
 
-                    {/* cover */}
-                    <div className='acf-contact-ico'>
-                        <img src={icoSac} alt="icone sac a main" />
-                    </div>
+            {/* google map */}
+            <aside className="acf-contact-right">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d88959.47025468003!2d4.662871362860385!3d46.30982172079913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f37153408d0b57%3A0x52d9a1006d6603ca!2sAtelier%20cuir%20Fuchats!5e0!3m2!1sfr!2sfr!4v1640700867246!5m2!1sfr!2sfr"
+                    width="600"
+                    height="450"
+                    loading="lazy"
+                    title="map-acf"></iframe>
+            </aside>
 
-                    {/* friends */}
-                    <div>
-                        <h4>Les amis de la région ✨</h4>
-                        <p>Boutique associative La Crémaillère à St Gengoux le National :<br />
-                            <a href="www.boutiquelacremaillere.fr"><u>www.boutiquelacremaillere.fr</u></a></p>
-                        <p>Les Mères Noël et Belles de Mai :<br />
-                            <a href="www.meresnoel-bellesdemai.com"><u>www.meresnoel-bellesdemai.com</u></a></p>
-                    </div>
-                </article>
-            </div>
+            {/* contact part */}
+            <article className="acf-contact-left">
 
-            {/* part down of the page */}
-            <div className='acf-contact-pagedown'>
+                {/* adress */}
+                <div>
+                    <h2>Atelier cuir des Fuchats</h2>
+                    <p>201 chemin des Fuchats <br />
+                        71960 Bussières</p>
+                    <p>Téléphone : <br />
+                        06 25 22 64 23</p>
+                    <p className="acf-contact-siret"><em>siret : 793 412 248 00015</em></p>
 
-                {/* contact form */}
-                <div className='acf-contact-form'>
-                    <h2 className='acf-contact-form-title'>📭 Contactez-moi! 📭</h2>
-                    <form action="" method="POST">
+                    <h3>L'atelier est ouvert sur demande,<br />n'hésitez pas à me contacter pour venir voir mes articles! </h3>
+                </div>
 
-                        {/* user informations */}
-                        <fieldset>
-                            <legend>Vos Coordonnées</legend>
-                            <p> <label for="Nom">Nom :</label>
-                                <input
-                                    type="text"
-                                    name="Nom"
-                                    id="nom"
-                                    size="50"
-                                    placeholder="ex: Holmes"
-                                    required /></p>
+                {/* cover */}
+                <div className='acf-contact-ico'>
+                    <img src={icoSac} alt="icone sac a main" />
+                </div>
 
-                            <p> <label for="Prenom">Prénom :</label>
-                                <input
-                                    type="text"
-                                    name="Prenom"
-                                    id="prenom"
-                                    size="50"
-                                    placeholder="ex: Sherlock"
-                                    required /></p>
+                {/* friends */}
+                <div>
+                    <h4>Les amis de la région ✨</h4>
+                    <p>Boutique associative La Crémaillère à St Gengoux le National :<br />
+                        <a href="www.boutiquelacremaillere.fr"><u>www.boutiquelacremaillere.fr</u></a></p>
+                    <p>Les Mères Noël et Belles de Mai :<br />
+                        <a href="www.meresnoel-bellesdemai.com"><u>www.meresnoel-bellesdemai.com</u></a></p>
+                </div>
+            </article>
+        </div>
 
-                            <p> <label for="Prenom">Adresse :</label>
-                                <input
-                                    type="text"
-                                    name="Prenom"
-                                    id="prenom"
-                                    size="50"
-                                    placeholder="ex: 221B Baker St, London NW1 6XE, Royaume-Uni "
-                                    required /></p>
+        {/* part down of the page */}
+        <div className='acf-contact-pagedown'>
 
-                            <p> <label for="Mail">Mail :</label>
-                                <input
-                                    type="email"
-                                    name="Mail"
-                                    id="mail"
-                                    size="50"
-                                    placeholder="ex: sherlock@holmes.net"
-                                    required /></p>
+            {/* contact form */}
+            <div className='acf-contact-form'>
+                <h2 className='acf-contact-form-title'>📭 Contactez-moi! 📭</h2>
+                <form >
 
-                        </fieldset>
-
-                        {/* user message */}
-                        <fieldset>
-                            <legend>Votre Message</legend>
-                            <p> <input
+                    {/* user informations */}
+                    <fieldset>
+                        <legend>Vos Coordonnées</legend>
+                        <p> <label for="lastName">Nom :</label>
+                            <input
                                 type="text"
-                                name="object"
-                                id="object"
-                                size="60"
-                                placeholder="Objet du message"
-                                required /></p>
+                                name="lastName"
+                                id="lastname"
+                                size="50"
+                                placeholder="ex: Holmes"
+                                required
+                                onChange={(event) => setLastName(event.target.value)}
+                            /></p>
 
-                            <textarea
-                                name="message"
-                                id="message"
-                                placeholder="Inscrivez ici votre demande"
-                                required></textarea>
+                        <p> <label for="firstName">Prénom :</label>
+                            <input
+                                type="text"
+                                name="firstName"
+                                id="firstName"
+                                size="50"
+                                placeholder="ex: Sherlock"
+                                required 
+                                onChange={(event) => setFirstName(event.target.value)}
+                                /></p>
 
-                        </fieldset>
+                        <p> <label for="adress">Adresse :</label>
+                            <input
+                                type="text"
+                                name="adress"
+                                id="adress"
+                                size="50"
+                                placeholder="ex: 221B Baker St, London NW1 6XE, Royaume-Uni "
+                                required 
+                                onChange={(event) => setAdress(event.target.value)}
+                
+                                /></p>
 
-                        {/* submit button */}
-                        <p><input type="submit" name="submit" value="Envoyer" /></p>
-                    </form>
-                </div>
+                        <p> <label for="mail">Mail :</label>
+                            <input
+                                type="email"
+                                name="mail"
+                                id="mail"
+                                size="50"
+                                placeholder="ex: sherlock@holmes.net"
+                                required 
+                                onChange={(event) => setEmail(event.target.value)}
+                                /></p>
 
-                {/* michele photo */}
-                <div className='acf-contact-form-img'>
-                    <img src={michele} alt="Michèle Foucher" />
-                </div>
+                    </fieldset>
+
+                    {/* user message */}
+                    <fieldset>
+                        <legend>Votre Message</legend>
+                        <p> <input
+                            type="text"
+                            name="title"
+                            id="title"
+                            size="60"
+                            placeholder="Objet du message"
+                            required 
+                            onChange={(event) => setTitle(event.target.value)}
+                            /></p>
+
+                        <textarea
+                            name="content"
+                            id="content"
+                            placeholder="Inscrivez ici votre demande"
+                            required
+                            onChange={(event) => setContent(event.target.value)}
+                            ></textarea>
+
+                    </fieldset>
+
+                    {/* submit button */}
+                    <p><input type="submit" name="submit" value="Envoyer" onClick={(event) => handleSubmit(event)} /></p>
+                </form>
             </div>
-        </main>
-    )
+
+            {/* michele photo */}
+            <div className='acf-contact-form-img'>
+                <img src={michele} alt="Michèle Foucher" />
+            </div>
+        </div>
+    </main>
+)
 }
 
 export default Contact;

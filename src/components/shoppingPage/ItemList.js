@@ -1,8 +1,6 @@
 import '../../styles/ShoppingPageStyle/ItemList.css'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Item from './Item';
-
-import { itemToSale } from '../../datas/itemToSale';
 import ItemModal from './ItemModal';
 import swal from 'sweetalert'
 
@@ -11,6 +9,27 @@ import swal from 'sweetalert'
 // modal is in the same div and same map than item 
 
 function ItemList({ activeCategory, cart, updateCart }) {
+    // get object from backend
+    const [itemToSale, setItemToSale] = useState(null);
+    const [fetchError, setFetchError] = useState(true)
+   
+    useEffect(() => {
+        async function getData() {
+            const response = await fetch("http://localhost:3001/api/shoppingList")
+            if(!response.ok){
+                console.log(response.status, response.statusText)
+                
+            }
+            else{
+                const data = await response.json()
+                setItemToSale(data);
+                setFetchError(false)
+            }
+        }
+        getData();
+    }, []);
+
+
     // choose the item to show in modal
     const [activeModaleItem, setActiveModaleItem] = useState('')
 
@@ -25,12 +44,15 @@ function ItemList({ activeCategory, cart, updateCart }) {
         }else{
             updateCart([...cart, {name, price, cover, amount: 1}]);
         }
-        swal("l'article à été ajouté au panier !","", "success");;
+        swal("l'article à été ajouté au panier !","", "success");
     }
     return (
         <section className="acf-shopping-item">
+            {fetchError && (
+                <h1>erreur de connexion au serveur</h1>
+            )}
             <ul className="acf-item-list">
-                {itemToSale.map(({ name, cover, id, price, category, fullName, comment, allCover, quantity }) =>
+                {itemToSale && itemToSale.map(({ name, cover, id, price, category, fullName, comment, allCover, quantity }) =>
 
                     !activeCategory || activeCategory === category ? (
                         <div key={id}>
@@ -48,10 +70,12 @@ function ItemList({ activeCategory, cart, updateCart }) {
                             />
 
                             {/* if modal is open choose the id of the item to display in modal and show modal */}
+                            
                             {modaleItemOpen && (
                                 activeModaleItem === id && (
-
+                                    
                                     <ItemModal
+                                    key = {id + name}
                                         name={name}
                                         price={price}
                                         fullName={fullName}
@@ -61,8 +85,10 @@ function ItemList({ activeCategory, cart, updateCart }) {
                                         addItemToCart = {addItemToCart}
 
                                     />
+                                    
                                 )
                             )}
+                            
                         </div>
 
                         // if there is no article to display return null
