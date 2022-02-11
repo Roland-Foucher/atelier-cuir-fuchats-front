@@ -22,7 +22,7 @@ https://gitlab.com/roland_foucher/atelier-cuir-fuchats-back
 
 ou sur la branch "cart" (tout en front, pas de requetes AJAX).
 
-## Author
+## Auteur
 
 Roland Foucher
 

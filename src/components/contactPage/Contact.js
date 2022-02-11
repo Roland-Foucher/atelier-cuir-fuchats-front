@@ -19,7 +19,7 @@ function Contact({ serverURL }) {
     const data = {firstname, lastname, adress, email, title, content};
 
     //post form to backend
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
 
         // button submit to default
         event.preventDefault();
@@ -35,7 +35,7 @@ function Contact({ serverURL }) {
         };
         
         // Post data
-        fetch(serverURL + '/contact', requestOptions)
+        await fetch(serverURL + '/contact', requestOptions)
             
             .then((response) => {
                 if (response.status === 201){
