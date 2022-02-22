@@ -39,6 +39,8 @@
     ]
   },
   "devDependencies": {
+    "case-sensitive-paths-webpack-plugin": "^2.4.0",
     "react-router-dom": "^6.2.1"
-  }
+  },
+  "homepage": "."
 }
