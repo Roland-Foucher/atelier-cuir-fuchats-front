@@ -34,7 +34,7 @@ function App() {
     localStorage.setItem('cart', JSON.stringify(cart))
   }, [cart])
 
-  const serverURL = 'http://localhost:3001/api';
+  const serverURL = 'https://atelier-cuir-fuchats-back.herokuapp.com/api';
   return (
     <div className='allWebSite'>
       <Banner
