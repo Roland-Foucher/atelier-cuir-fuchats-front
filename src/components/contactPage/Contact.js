@@ -118,7 +118,6 @@ return (
                                 name="lastName"
                                 id="lastname"
                                 size="50"
-                                placeholder="ex: Holmes"
                                 required
                                 onChange={(event) => setLastName(event.target.value)}
                             /></p>
@@ -129,7 +128,6 @@ return (
                                 name="firstName"
                                 id="firstName"
                                 size="50"
-                                placeholder="ex: Sherlock"
                                 required 
                                 onChange={(event) => setFirstName(event.target.value)}
                                 /></p>
@@ -140,7 +138,6 @@ return (
                                 name="adress"
                                 id="adress"
                                 size="50"
-                                placeholder="ex: 221B Baker St, London NW1 6XE, Royaume-Uni "
                                 required 
                                 onChange={(event) => setAdress(event.target.value)}
                 
@@ -152,7 +149,6 @@ return (
                                 name="mail"
                                 id="mail"
                                 size="50"
-                                placeholder="ex: sherlock@holmes.net"
                                 required 
                                 onChange={(event) => setEmail(event.target.value)}
                                 /></p>

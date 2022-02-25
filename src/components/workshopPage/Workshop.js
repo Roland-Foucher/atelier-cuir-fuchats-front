@@ -22,14 +22,14 @@ function Workshop() {
 
             {/* second block */}
             <div className='acf-workshop-block acf-workshop-block-bis'>
-                <h2 className='acf-workshop-title-blk2'>Bienvenus à l'atelier artisanal de maroquinerie des Fuchats à Bussières (Saône et Loire)</h2>
+                <h2 className='acf-workshop-title-blk2'>Bienvenue à l'Atelier artisanal de maroquinerie des Fuchats à Bussières (Saône et Loire)</h2>
                 <div className='acf-workshop-images'>
                     <img src={home} alt="maison fushiats" className='acf-workshop-images-single' />
                     <img src={maconnais} alt="maison fushiats" className='acf-workshop-images-single' />
                 </div>
                 <div className='acf-workshop-descritption'>
                     <p>L'atelier des Fuchats se situe  à Bussières.</p>
-                    <p>Un village de Bourgogne en Saône et Loire, à 10 kms à l'ouest de Macon.</p>
+                    <p>Un village de Bourgogne en Saône et Loire, à 10 kms à l'ouest de Mâcon.</p>
                 </div>
             </div>
 
