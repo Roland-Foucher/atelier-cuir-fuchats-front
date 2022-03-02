@@ -1,5 +1,3 @@
-import swal from 'sweetalert'
-
 import '../../styles/ShoppingPageStyle/Item.css'
 
 // config of an item to display.
