@@ -7,24 +7,23 @@ import { useEffect, useState } from 'react'
 function ShoppingList({ cart, updateCart, serverURL }) {
     
         // get object from backend
-        const [itemToSale, setItemToSale] = useState(null);
-        const [fetchError, setFetchError] = useState(true)
-       
-        useEffect(() => {
-            async function getData() {
-                const response = await fetch(serverURL + "/shoppingList")
-                if(!response.ok){
-                    console.log(response.status, response.statusText)
-                    
-                }
-                else{
-                    const data = await response.json()
-                    setItemToSale(data);
-                    setFetchError(false)
-                }
-            }
-            getData();
-        }, []);
+const [itemToSale, setItemToSale] = useState(null);
+const [fetchError, setFetchError] = useState(false)
+
+useEffect(() => {
+    async function getData() {
+        try{
+            const response = await fetch(serverURL + "/shoppingList")
+            const data = await response.json()
+            setItemToSale(data);
+            
+        }catch(error){
+            console.error(error)
+            setFetchError(true)
+        }
+    }
+    getData();
+}, [serverURL]);
     // useState for the actve category filter
     const [activeCategory, setActiveCategory] = useState('')
     

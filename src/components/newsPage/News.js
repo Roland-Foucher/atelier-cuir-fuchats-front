@@ -2,26 +2,24 @@ import NewsArticles from './NewsArticles'
 import '../../styles/News/News.css'
 import { useEffect, useState } from 'react';
 
-function News({serverURL}) {
+function News({ serverURL }) {
     //connect to backend
     const [news, setnews] = useState(null);
-    const [fetchError, setFetchError] = useState(true)
+    const [fetchError, setFetchError] = useState(false)
 
     useEffect(() => {
         async function getData() {
-            const response = await fetch(serverURL +  "/news")
-            if (!response.ok) {
-                console.log(response.status, response.statusText)
-
-            }
-            else {
-                const data = await response.json()
+            try {
+                const response = await fetch(serverURL + "/news");
+                const data = await response.json();
                 setnews(data);
-                setFetchError(false)
+            } catch (error) {
+                console.error(error)
+                setFetchError(true)
             }
         }
         getData();
-    }, []);
+    }, [serverURL]);
 
     return (
         <main className="acf-news-page">

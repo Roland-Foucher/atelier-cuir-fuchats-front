@@ -9,23 +9,21 @@ function Photo({serverURL}) {
 
     //connect to backend
     const [photos, setPhotos] = useState(null);
-    const [fetchError, setFetchError] = useState(true)
+    const [fetchError, setFetchError] = useState(false)
 
     useEffect(() => {
         async function getData() {
-            const response = await fetch(serverURL + "/photos")
-            if (!response.ok) {
-                console.log(response.status, response.statusText)
-
-            }
-            else {
+            try{
+                const response = await fetch(serverURL + "/photos")
                 const data = await response.json()
                 setPhotos(data);
-                setFetchError(false)
+            }catch(error){
+                console.error(error)
+                setFetchError(true)
             }
         }
         getData();
-    }, []);
+    }, [serverURL]);
     // switch photo modal active or not
     const [activePhotoModal, setActivePhotoModal] = useState(false)
 
